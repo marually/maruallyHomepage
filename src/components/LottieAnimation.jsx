@@ -8,26 +8,35 @@ const LottieAnimation = ({ animationPath, className = '', style = {} }) => {
     useEffect(() => {
         if (!containerRef.current) return;
 
-        // Load and play animation
-        fetch(animationPath)
-            .then((res) => res.json())
-            .then((data) => {
-                if (animationRef.current) {
-                    animationRef.current.destroy();
-                }
+        const loadAnimation = (animationData) => {
+            if (animationRef.current) {
+                animationRef.current.destroy();
+            }
 
-                animationRef.current = lottie.loadAnimation({
-                    container: containerRef.current,
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    animationData: data,
-                    rendererSettings: {
-                        preserveAspectRatio: 'xMidYMid slice'
-                    }
-                });
-            })
-            .catch((error) => console.error('Failed to load Lottie animation:', error));
+            animationRef.current = lottie.loadAnimation({
+                container: containerRef.current,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                animationData: animationData,
+                rendererSettings: {
+                    preserveAspectRatio: 'xMidYMid slice'
+                }
+            });
+        };
+
+        // Check if animationPath is already a JSON object
+        if (typeof animationPath === 'object' && animationPath !== null) {
+            loadAnimation(animationPath);
+        } else if (typeof animationPath === 'string') {
+            // Load from URL/file path
+            fetch(animationPath)
+                .then((res) => res.json())
+                .then((data) => {
+                    loadAnimation(data);
+                })
+                .catch((error) => console.error('Failed to load Lottie animation:', error));
+        }
 
         return () => {
             if (animationRef.current) {
@@ -37,13 +46,13 @@ const LottieAnimation = ({ animationPath, className = '', style = {} }) => {
     }, [animationPath]);
 
     return (
-        <div 
-            ref={containerRef} 
-            className={className} 
+        <div
+            ref={containerRef}
+            className={className}
             style={{
                 overflow: 'hidden',
                 ...style
-            }} 
+            }}
         />
     );
 };

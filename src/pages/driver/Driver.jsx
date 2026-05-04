@@ -124,8 +124,8 @@ const Driver = () => {
             { step: '02', icon: shakeHandIcon, title: '광고 매칭', desc: '내 차량과 운행 패턴에 최적화된 광고주와 매칭됩니다.' },
             { step: '03', icon: signIcon, title: '광고 계약', desc: '앱 내 전자서명으로 간편하고 투명하게 계약을 체결합니다.' },
             { step: '04', icon: deliveryIcon, title: '광고물 배송', desc: '지정된 주소로 차량용 광고 스티커가 안전하게 배송됩니다.' },
-            { step: '05', icon: stickerIcon, title: '부착/업로드', desc: '광고물을 부착하고 인증 사진을 앱에 업로드하여 시작을 알립니다.' },
-            { step: '06', icon: carIcon, title: '광고 운행', desc: '평소처럼 일상 주행을 하세요. 수익은 자동으로 정산됩니다.' }
+            { step: '05', icon: stickerIcon, title: '부착/업로드', desc: '광고물을 부착하고 인증 사진을 앱에 업로드하여 광고운행을 준비합니다.' },
+            { step: '06', icon: carIcon, title: '광고 운행', desc: '평소처럼 일상 주행을 하세요. 수익은 자동으로 계상됩니다.' }
           ].map((item, idx) => (
             <div key={idx} className="driver-step-card">
               <div className="driver-step-card__left">

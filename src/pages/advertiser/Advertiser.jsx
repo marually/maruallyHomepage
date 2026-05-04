@@ -1,47 +1,281 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import TopNavBar from '../../components/TopNavBar';
+import LottieAnimation from '../../components/LottieAnimation';
+import './Advertiser.css';
+import '../Home/Home.css';
+
+// Assets
+import heroBg from '../../assets/advertiserAssets/hero_advertiser.png';
+import idleTaxi from '../../assets/advertiserAssets/idle_taxi.png';
+import activeCar from '../../assets/advertiserAssets/active_car.png';
+import bowMaruallyJson from '../../assets/advertiserAssets/bowMarually.json';
+import advertiserVideo from '../../assets/advertiserAssets/advertiser.mp4';
+
+// Parallax Desktop Assets
+import parallax1 from '../../assets/advertiserAssets/parallax1.png';
+import parallax2 from '../../assets/advertiserAssets/parallax2.png';
+import parallax3 from '../../assets/advertiserAssets/parallax3.png';
+import parallax4 from '../../assets/advertiserAssets/parallax4.png';
+import parallax5 from '../../assets/advertiserAssets/parallax5.png';
+import parallax6 from '../../assets/advertiserAssets/parallax6.png';
+
+// Parallax Mobile Assets
+import p1 from '../../assets/advertiserAssets/p1.png';
+import p2 from '../../assets/advertiserAssets/p2.png';
+import p3 from '../../assets/advertiserAssets/p3.png';
+import p4 from '../../assets/advertiserAssets/p4.png';
+import p5 from '../../assets/advertiserAssets/p5.png';
+import p6 from '../../assets/advertiserAssets/p6.png';
+import p7 from '../../assets/advertiserAssets/p7.png';
+import p8 from '../../assets/advertiserAssets/p8.png';
+
+// Footer social icons (from Home)
+import socialIcon1 from '../../assets/zB0X7.png';
+import socialIcon2 from '../../assets/ofqtO.png';
 
 const Advertiser = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [scrollY, setScrollY] = useState(0);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // If navigated with a hash (e.g. /advertiser#request), scroll to that element
+  useEffect(() => {
+    if (location && location.hash) {
+      const id = location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        // small timeout to allow page layout to settle
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 50);
+      }
+    }
+  }, [location]);
+
+  const desktopLayers = [
+    { id: 1, src: parallax1, speed: 0.3 },
+    { id: 2, src: parallax2, speed: 0.28 },
+    { id: 3, src: parallax3, speed: 0.24 },
+    { id: 4, src: parallax4, speed: 0.2 },
+    { id: 5, src: parallax5, speed: 0.1 },
+    { id: 6, src: parallax6, speed: 0 },
+  ];
+
+  const mobileLayers = [
+    { id: 1, src: p1, speed: 0.56 },
+    { id: 2, src: p2, speed: 0.48 },
+    { id: 3, src: p3, speed: 0.4 },
+    { id: 4, src: p4, speed: 0.32 },
+    { id: 5, src: p5, speed: 0.24 },
+    { id: 6, src: p6, speed: 0.16 },
+    { id: 7, src: p7, speed: 0.08 },
+    { id: 8, src: p8, speed: 0 },
+  ];
+
+  const layers = isMobile ? mobileLayers : desktopLayers;
+
   return (
-    <div style={{ minHeight: '100vh', background: '#F8F9FA' }}>
+    <div className="advertiser-page">
       <TopNavBar />
-      <div style={{ 
-        maxWidth: '1280px', 
-        margin: '0 auto', 
-        padding: '80px 32px',
-        textAlign: 'center'
-      }}>
-        <h1 style={{ 
-          fontFamily: "'Noto Sans KR', sans-serif",
-          fontSize: '36px',
-          fontWeight: 900,
-          color: '#191C1D',
-          marginBottom: '16px'
-        }}>
-          광고주 페이지
-        </h1>
-        <p style={{ 
-          fontFamily: "'Noto Sans KR', sans-serif",
-          fontSize: '18px',
-          color: '#3F4A39',
-          lineHeight: 1.6
-        }}>
-          가장 효율적인 차량 광고 타겟팅 시스템을 경험해 보세요.
-        </p>
-        <div style={{
-          marginTop: '40px',
-          padding: '24px',
-          background: '#fff',
-          borderRadius: '16px',
-          border: '1px solid rgba(191, 202, 180, 0.3)',
-          maxWidth: '600px',
-          margin: '40px auto 0'
-        }}>
-          <p style={{ color: '#71717A', fontSize: '14px' }}>
-            이 페이지는 현재 준비 중입니다. 더 나은 서비스로 찾아뵙겠습니다.
-          </p>
+
+      {/* Hero Section */}
+      <section className="advertiser-hero">
+        <div className="advertiser-hero__bg">
+          {layers.map((layer) => (
+            <img
+              key={layer.id}
+              className={`parallax-layer parallax-layer-${layer.id}`}
+              src={layer.src}
+              alt={`Parallax layer ${layer.id}`}
+              style={{
+                transform: `translateY(${scrollY * layer.speed}px)`,
+              }}
+            />
+          ))}
+          <div className="advertiser-hero__overlay"></div>
         </div>
-      </div>
+        {/* hero content removed per request */}
+      </section>
+
+      {/* VS Section */}
+      <section className="advertiser-vs">
+        <div className="advertiser-vs__inner">
+          <div className="advertiser-vs__grid">
+            {/* Left: Idle */}
+            <div className="vs-card vs-card--idle">
+              <div className="vs-card__image">
+                <img src={idleTaxi} alt="차고지 멈춘차" />
+              </div>
+              <h3 className="vs-card__title">차고지 멈춘차에도 광고비 지불?</h3>
+            </div>
+
+            {/* Center: VS */}
+            <div className="vs-divider">
+              <span className="vs-divider__text">VS</span>
+            </div>
+
+            {/* Right: Active */}
+            <div className="vs-card vs-card--active">
+              <div className="vs-card__image">
+                <img src={activeCar} alt="운행데이터 기반 측정" />
+              </div>
+              <h3 className="vs-card__title">데이터로 운행한 만큼 광고비 지불!</h3>
+            </div>
+          </div>
+
+          <div className="vs-explanation">
+            <h4 className="vs-explanation__title">
+              아직도 차고지에 쉬는 택시에도 광고비를 지급하십니까?
+            </h4>
+            <p className="vs-explanation__text">
+              법인 택시의 <span className="text-primary font-bold">70%</span>는 기사 구인난으로 차고지에 운휴중,<br />
+              즉, 100대 광고비 지급시 바로 <span className="text-error font-bold">70% 손실</span>이 발생합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Fee System Section */}
+      <section className="advertiser-fee">
+        <div className="advertiser-fee__inner">
+          <h2 className="advertiser-fee__title">마루알리 광고비 정산 시스템</h2>
+          <div className="fee-formula">
+            <p className="fee-formula__text">
+              광고비 = 광고판 면적 X 유동인구에 따른 지역별 단가 X 해당 지역 광고시간
+            </p>
+          </div>
+
+          <div className="fee-grid">
+            {/* Card 1 */}
+            <div className="fee-card">
+              <div className="fee-card__header">
+                <h3>광고판 면적</h3>
+              </div>
+              <div className="fee-card__body">
+                <p>“승용·택시 : 1.6㎡, 승합차 : 2㎡, 학원버스 : 4㎡, 화물탑차 : 6㎡, 노선버스 : 8.2㎡”</p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="fee-card">
+              <div className="fee-card__header">
+                <h3>유동인구에 따른 지역별 단가</h3>
+              </div>
+              <div className="fee-card__body">
+                <p>광고 면적 1㎡ 당 1시간 단가 (예시)</p>
+                <ul className="fee-list">
+                  <li><span className="font-bold">[서울 최고]</span> 중구 1,035원</li>
+                  <li><span className="font-bold">[서울 최저]</span> 강동구 423원</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="fee-card">
+              <div className="fee-card__header">
+                <h3>해당 지역 광고 시간</h3>
+              </div>
+              <div className="fee-card__body">
+                <p>승합차가 강동구에서 3시간 운행 시 광고비:</p>
+                <p className="fee-highlight">승합차 2㎡ x 강동구 423원 x 3시간 = 2,538원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dashboard Section */}
+      <section className="advertiser-dashboard">
+        <div className="advertiser-dashboard__inner">
+          <h2 className="advertiser-dashboard__title">
+            캠페인 별로 광고주님에게 실시간 Dashboard 제공
+          </h2>
+          <div className="dashboard-preview">
+            <div className="dashboard-preview__wrapper">
+              <video
+                src={advertiserVideo}
+                alt="Dashboard Preview"
+                controls
+                autoPlay
+                muted
+                loop
+                className="dashboard-preview__video"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Request Section */}
+      <section id="request" className="advertiser-request">
+        <div className="advertiser-request__inner">
+          <div className="advertiser-request__info">
+            <LottieAnimation animationPath={bowMaruallyJson} className="request-lottie" />
+            <h2 className="advertiser-request__title">광고문의 감사합니다.</h2>
+            <p className="advertiser-request__desc">
+              데이터로 광고비 산정하는 차량 광고로 광고예산 절감 하세요.
+            </p>
+          </div>
+          <div className="advertiser-request__form">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSd5ZhKXKKSeetUf_WHAvsOPzLnDLtUh01FAiB1ABmjEUKKVqg/viewform?embedded=true"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
+              title="Google Form"
+            >
+              로드 중…
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer (from Home) */}
+      <footer className="footer">
+        <div className="footer__inner">
+          <div className="footer__logo">
+            <LottieAnimation animationPath="/src/assets/steering.json" />
+          </div>
+          <div className="footer__info">
+            <span className="footer__brand">Marually</span>
+            <span className="footer__copyright">
+              © 2024 Marually. Kinetic Intelligence for Mobility.
+            </span>
+            <div className="footer__socials">
+              <a href="#" className="footer__social-link">
+                <img src={socialIcon1} alt="Social" />
+              </a>
+              <a href="#" className="footer__social-link">
+                <img src={socialIcon2} alt="Social" />
+              </a>
+            </div>
+          </div>
+          <div className="footer__links">
+            <a href="#" className="footer__link">Privacy Policy</a>
+            <a href="#" className="footer__link">Terms of Service</a>
+            <a href="#" className="footer__link">Drivers Portal</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

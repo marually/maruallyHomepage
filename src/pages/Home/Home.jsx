@@ -429,9 +429,9 @@ const Home = () => {
       {/* ===== CTA Section ===== */}
       <section className="section-cta">
         <div className="section-cta__inner">
-          <h2 className="section-cta__title">지금 바로 시작해보세요</h2>
+          <h2 className="section-cta__title">무엇이든 물어보세요.</h2>
           <div className="section-cta__buttons">
-            <button className="cta-btn cta-btn--green">광고주 문의하기</button>
+            <Link to="/advertiser#request" className="cta-btn cta-btn--green">광고주 문의하기</Link>
             <Link to="/driver#googleform" className="cta-btn cta-btn--purple">운전자 문의하기</Link>
           </div>
         </div>
