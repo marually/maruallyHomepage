@@ -10,8 +10,8 @@ import socialIcon2 from '../../assets/ofqtO.png';
 
 // Driver page assets
 import driverHeroUrl from '../../assets/driveAssets/driveHero.json?url';
-import googleIcon from '../../assets/google.png';
-import appleIcon from '../../assets/apple.png';
+import googleIcon from '../../assets/1google.png';
+import appleIcon from '../../assets/1apple.png';
 import manycarmageUrl from '../../assets/driveAssets/manycar.png';
 import busAdUrl from '../../assets/driveAssets/busAd.png';
 import topcarAdUrl from '../../assets/driveAssets/topcarAD.png';

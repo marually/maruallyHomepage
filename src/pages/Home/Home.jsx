@@ -17,8 +17,8 @@ import iconStep5 from '../../assets/vyO6E.png';
 import iconStep6 from '../../assets/Q6VqA.png';
 
 // Store badges
-import googlePlayIcon from '../../assets/google.png';
-import appStoreIcon from '../../assets/apple.png';
+import googlePlayIcon from '../../assets/1google.png';
+import appStoreIcon from '../../assets/1apple.png';
 
 // App feature icons
 import iconFeature1 from '../../assets/H8RWW.png';
@@ -444,9 +444,9 @@ const Home = () => {
             <LottieAnimation animationPath="/src/assets/steering.json" />
           </div>
           <div className="footer__info">
-            <span className="footer__brand">Marually</span>
+            <span className="footer__brand">주식회사 마루디지털</span>
             <span className="footer__copyright">
-              © 2024 Marually. Kinetic Intelligence for Mobility.
+              marudigital@naver.com | 사업자등록번호: 714-86-01553
             </span>
             <div className="footer__socials">
               <a href="#" className="footer__social-link">
@@ -458,9 +458,9 @@ const Home = () => {
             </div>
           </div>
           <div className="footer__links">
-            <a href="#" className="footer__link">Privacy Policy</a>
-            <a href="#" className="footer__link">Terms of Service</a>
-            <a href="#" className="footer__link">Drivers Portal</a>
+            <a href="https://blog.naver.com/uddum/223007820913" className="footer__link">개인정보처리방침</a>
+            <a href="https://blog.naver.com/uddum/223007823299" className="footer__link">이용약관</a>
+            <a href="https://blog.naver.com/uddum/223009016896" className="footer__link">광고계약서 등</a>
           </div>
         </div>
       </footer>
