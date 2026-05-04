@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+
+:root {
+  --primary: #47A919;
+  --primary-light: #a8e063;
+  --primary-bg: rgba(71, 169, 25, 0.1);
+  --secondary: #9900CC;
+  --secondary-light: #f5d9ff;
+  --secondary-bg: rgba(150, 0, 200, 0.05);
+  --danger: #BA1A1A;
+  --danger-bg: rgba(186, 26, 26, 0.05);
+
+  --bg-white: #FFFFFF;
+  --bg-light: #F8F9FA;
+  --bg-gray: #F3F4F5;
+  --bg-gray2: #e3e4e6;
+  --bg-dark: #191C1D;
+
+  --text-dark: #191C1D;
+  --text-body: #3F4A39;
+  --text-muted: #71717A;
+  --text-nav: #52525B;
+  --text-nav-active: #16A34A;
+  --text-light: #756F6B;
+
+  --border-light: rgba(191, 202, 180, 0.3);
+  --border-card: rgba(191, 202, 180, 0.3);
+  --shadow-sm: 0 1px 1.75px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 8px 8.75px -6px rgba(0, 0, 0, 0.1), 0 20px 21.875px -5px rgba(0, 0, 0, 0.1);
+
+  --font-main: 'Noto Sans KR', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+
+  --gradient-green: linear-gradient(180deg, #4DAC1E 0%, #A8E063 100%);
+  --gradient-purple: linear-gradient(180deg, #6B0091 0%, #CC3FBC 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

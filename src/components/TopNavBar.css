@@ -1,0 +1,126 @@
+/* TopNavBar Shared Styles */
+.top-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(244, 244, 245, 0.5);
+  backdrop-filter: blur(21px);
+  -webkit-backdrop-filter: blur(21px);
+  box-shadow: 0 1px 1.75px rgba(0, 0, 0, 0.05);
+}
+
+.top-navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.top-navbar__logo img {
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+}
+
+.top-navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.top-navbar__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #52525B;
+  letter-spacing: -0.4px;
+  line-height: 1.5;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.top-navbar__link--active {
+  color: #16A34A;
+  font-weight: 600;
+  border-bottom-color: #16A34A;
+}
+
+.top-navbar__link:hover {
+  color: #16A34A;
+}
+
+.top-navbar__cta {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(180deg, #6B0091 0%, #CC3FBC 100%);
+  padding: 10px 24px;
+  border-radius: 12px;
+  letter-spacing: -0.4px;
+  line-height: 1.6;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+}
+
+.top-navbar__cta:hover {
+  opacity: 0.9;
+}
+
+.top-navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.top-navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #191C1D;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .top-navbar__inner {
+    padding: 0 16px;
+  }
+
+  .top-navbar__links {
+    display: none;
+  }
+
+  .top-navbar__hamburger {
+    display: flex;
+  }
+
+  .top-navbar__cta {
+    display: none;
+  }
+
+  .top-navbar--mobile-open .top-navbar__links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(244, 244, 245, 0.97);
+    backdrop-filter: blur(21px);
+    padding: 20px 16px;
+    gap: 16px;
+    border-bottom: 1px solid rgba(191, 202, 180, 0.3);
+    z-index: 999;
+  }
+}
