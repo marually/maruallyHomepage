@@ -39,7 +39,7 @@ const TopNavBar = () => {
           </Link>
         </div>
 
-        <Link to="/advertiser" className="top-navbar__cta">
+        <Link to="/advertiser#request" className="top-navbar__cta">
           광고  의뢰
         </Link>
 
