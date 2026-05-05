@@ -145,7 +145,7 @@ const Home = () => {
             <div className="step-card__icon">
               <img src={iconStep1} alt="" />
             </div>
-            <h3 className="step-card__title">01. 광고 매칭 및 광고 계약</h3>
+            <h3 className="step-card__title">1. 광고 매칭 및 광고 계약</h3>
             <p className="step-card__desc">
               광고 매칭 되면, 운전자는 앱에서 광고 전자 계약을 체결합니다.
             </p>
@@ -155,7 +155,7 @@ const Home = () => {
             <div className="step-card__icon">
               <img src={iconStep2} alt="" />
             </div>
-            <h3 className="step-card__title">02. 광고판 배송</h3>
+            <h3 className="step-card__title">2. 광고판 배송</h3>
             <p className="step-card__desc">
               차량 맞춤 광고판에 비콘 설치 및 배송이 진행됩니다.
             </p>
@@ -165,7 +165,7 @@ const Home = () => {
             <div className="step-card__icon">
               <img src={iconStep3} alt="" />
             </div>
-            <h3 className="step-card__title">03. 광고판 부착</h3>
+            <h3 className="step-card__title">3. 광고판 부착</h3>
             <p className="step-card__desc">
               운전자가 배송된 광고판을 차에 직접 부착합니다.
             </p>
@@ -175,7 +175,7 @@ const Home = () => {
             <div className="step-card__icon">
               <img src={iconStep4} alt="" />
             </div>
-            <h3 className="step-card__title">04. 자동 연결</h3>
+            <h3 className="step-card__title">4. 자동 연결</h3>
             <p className="step-card__desc">
               운전자 탑승 시 비콘과 근거리 페어링되어 앱이 자동 실행됩니다.
             </p>
@@ -185,7 +185,7 @@ const Home = () => {
             <div className="step-card__icon">
               <img src={iconStep5} alt="" />
             </div>
-            <h3 className="step-card__title">05. 데이터 전송</h3>
+            <h3 className="step-card__title">5. 데이터 전송</h3>
             <p className="step-card__desc">
               광고 운행 중에만 앱에서 비콘 센서 및 GPS 데이터를 실시간 전송합니다.
             </p>
@@ -195,7 +195,7 @@ const Home = () => {
             <div className="step-card__icon">
               <img src={iconStep6} alt="" />
             </div>
-            <h3 className="step-card__title">06. 자동 종료</h3>
+            <h3 className="step-card__title">6. 자동 종료</h3>
             <p className="step-card__desc">
               하차 시 비콘과 연결이 끊기며 앱과 광고 측정이 자동 종료됩니다.
             </p>
@@ -207,6 +207,9 @@ const Home = () => {
       <section className="section-carousel">
         <div className="section-carousel__inner">
           <h2 className="section-carousel__heading">마루알리의 특별한 경쟁력</h2>
+          <h3 className="section-carousel__subheading">
+            * 국내 특허등록(2건) 1019864190000, 1029590700000 * 미국특허등록 16477856<br /> * 국내 상표권 4020021508037 * 미국상표권 5,964,888
+          </h3>
           <div className="section-carousel__viewport">
             {/* Slide background image */}
             <div className="section-carousel__slides">
@@ -358,7 +361,7 @@ const Home = () => {
           <div className="section-compare__header">
             <h2 className="section-compare__title">왜 마루알리인가요?</h2>
             <p className="section-compare__subtitle">
-              기존 광고 방식과 비교하여 압도적인 투명성과 효율을 자랑합니다.
+              기존 차량광고와 비교하여 높은 투명성과 효율을 경험해보세요!
             </p>
           </div>
           <div className="section-compare__table">

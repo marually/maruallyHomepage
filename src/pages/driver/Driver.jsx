@@ -101,7 +101,7 @@ const Driver = () => {
         <div className="driver-data__inner">
           <h2 className="driver-data__title">데이터로 측정하여<br className="mobile-break" /> 모든 차량이 광고 할 수 있습니다.</h2>
           <p className="driver-data__desc">
-            마루알리는 데이터로 광고운행을 측정하므로 어떤 차종이든 최적의 광고주와 매칭되어 기사님의 수익을 창출함.<br /> 현재는 옥외광고물법상 허용되는 영업용차, 렌터카가 차량광고 할 수 있습니다.
+            마루알리는 데이터로 광고운행을 측정하므로 어떤 차종이든 최적의 광고주와 매칭되어 기사님의 수익을 창출합니다.<br /> 현재는 옥외광고물법상 허용되는 영업용차, 렌터카가 차량광고 할 수 있습니다.
           </p>
           <div
             className={`driver-data__image-wrapper fade-in ${imageDataVisible ? 'is-visible' : ''}`}
@@ -115,7 +115,7 @@ const Driver = () => {
       {/* 3. Advertising Process */}
       <section className="driver-process">
         <div className="driver-process__header">
-          <h2 className="driver-process__title">어플에서 광고주와 매칭과 광고계약 등이 이루어져 간편</h2>
+          <h2 className="driver-process__title">어플에서 광고주와의 매칭과 광고계약 등이 이루어져 간편</h2>
           <p className="driver-process__subtitle">스마트폰 하나로 모든 과정이 진행됩니다. 마루알리 앱의 광고활동 자동 측정으로 쉽고 편안하게 광고 수익 창출을 시작하세요.</p>
         </div>
         <div className="driver-process__grid">
@@ -219,9 +219,9 @@ const Driver = () => {
             <LottieAnimation animationPath="/src/assets/steering.json" />
           </div>
           <div className="footer__info">
-            <span className="footer__brand">Marually</span>
+            <span className="footer__brand">주식회사 마루디지털</span>
             <span className="footer__copyright">
-              © 2024 Marually. Kinetic Intelligence for Mobility.
+              marudigital@naver.com | 사업자등록번호: 714-86-01553
             </span>
             <div className="footer__socials">
               <a href="#" className="footer__social-link">
@@ -233,9 +233,9 @@ const Driver = () => {
             </div>
           </div>
           <div className="footer__links">
-            <a href="#" className="footer__link">Privacy Policy</a>
-            <a href="#" className="footer__link">Terms of Service</a>
-            <a href="#" className="footer__link">Drivers Portal</a>
+            <a href="https://blog.naver.com/uddum/223007820913" className="footer__link">개인정보처리방침</a>
+            <a href="https://blog.naver.com/uddum/223007823299" className="footer__link">이용약관</a>
+            <a href="https://blog.naver.com/uddum/223009016896" className="footer__link">광고계약서 등</a>
           </div>
         </div>
       </footer>

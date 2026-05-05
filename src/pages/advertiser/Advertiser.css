@@ -120,12 +120,12 @@ h6 {
   font-size: 5rem;
   font-weight: 900;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.2);
+  color: #c9c7c7;
 }
 
 .vs-explanation {
   background-color: #ffffff;
-  padding: 64px;
+  padding: 32px;
   border-radius: 32px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -318,7 +318,7 @@ h6 {
 
 /* 5. Request Section */
 .advertiser-request {
-  padding: 24px 24px;
+  padding: 40px 24px;
   background-color: #f3f4f5;
 }
 

@@ -70,9 +70,9 @@ const Advertiser = () => {
   }, [location]);
 
   const desktopLayers = [
-    { id: 1, src: parallax1, speed: 0.3 },
-    { id: 2, src: parallax2, speed: 0.28 },
-    { id: 3, src: parallax3, speed: 0.24 },
+    { id: 1, src: parallax1, speed: 0.5 },
+    { id: 2, src: parallax2, speed: 0.4 },
+    { id: 3, src: parallax3, speed: 0.3 },
     { id: 4, src: parallax4, speed: 0.2 },
     { id: 5, src: parallax5, speed: 0.1 },
     { id: 6, src: parallax6, speed: 0 },
@@ -145,8 +145,9 @@ const Advertiser = () => {
               아직도 차고지에 쉬는 택시에도 광고비를 지급하십니까?
             </h4>
             <p className="vs-explanation__text">
-              법인 택시의 <span className="text-primary font-bold">70%</span>는 기사 구인난으로 차고지에 운휴중,<br />
-              즉, 100대 광고비 지급시 바로 <span className="text-error font-bold">70% 손실</span>이 발생합니다.
+              법인 택시의 <span className="text-primary font-bold">70%</span>는 기사 구인난으로 차고지에 쉬고 있습니다. <br />
+              IT기술이 없어, 광고운행 여부와 상관없이 광고비를 지급해야 하는  현행 과금 방식에서는 <br />
+              광고비 지급 즉시  <span className="text-error font-bold">70% 손실</span>이 발생합니다.
             </p>
           </div>
         </div>
@@ -169,7 +170,7 @@ const Advertiser = () => {
                 <h3>광고판 면적</h3>
               </div>
               <div className="fee-card__body">
-                <p>“승용·택시 : 1.6㎡, 승합차 : 2㎡, 학원버스 : 4㎡, 화물탑차 : 6㎡, 노선버스 : 8.2㎡”</p>
+                <p>승용·택시 : 1.6㎡,  승합차 : 2㎡,<br /> 중형버스 : 4㎡,  택배탑차(1톤) : 6㎡, <br />노선버스 : 8.2㎡</p>
               </div>
             </div>
 
@@ -193,7 +194,7 @@ const Advertiser = () => {
                 <h3>해당 지역 광고 시간</h3>
               </div>
               <div className="fee-card__body">
-                <p>승합차가 강동구에서 3시간 운행 시 광고비:</p>
+                <p>승합차가 강동구에서 3시간 운행시 광고비:</p>
                 <p className="fee-highlight">승합차 2㎡ x 강동구 423원 x 3시간 = 2,538원</p>
               </div>
             </div>
@@ -230,7 +231,7 @@ const Advertiser = () => {
             <LottieAnimation animationPath={bowMaruallyJson} className="request-lottie" />
             <h2 className="advertiser-request__title">광고문의 감사합니다.</h2>
             <p className="advertiser-request__desc">
-              데이터로 광고비 산정하는 차량 광고로 광고예산 절감 하세요.
+              데이터로 광고비 산정하는 차량광고로 광고예산 절감 하세요.
             </p>
           </div>
           <div className="advertiser-request__form">
@@ -256,9 +257,9 @@ const Advertiser = () => {
             <LottieAnimation animationPath="/src/assets/steering.json" />
           </div>
           <div className="footer__info">
-            <span className="footer__brand">Marually</span>
+            <span className="footer__brand">주식회사 마루디지털</span>
             <span className="footer__copyright">
-              © 2024 Marually. Kinetic Intelligence for Mobility.
+              marudigital@naver.com | 사업자등록번호: 714-86-01553
             </span>
             <div className="footer__socials">
               <a href="#" className="footer__social-link">
@@ -270,9 +271,9 @@ const Advertiser = () => {
             </div>
           </div>
           <div className="footer__links">
-            <a href="#" className="footer__link">Privacy Policy</a>
-            <a href="#" className="footer__link">Terms of Service</a>
-            <a href="#" className="footer__link">Drivers Portal</a>
+            <a href="https://blog.naver.com/uddum/223007820913" className="footer__link">개인정보처리방침</a>
+            <a href="https://blog.naver.com/uddum/223007823299" className="footer__link">이용약관</a>
+            <a href="https://blog.naver.com/uddum/223009016896" className="footer__link">광고계약서 등</a>
           </div>
         </div>
       </footer>
