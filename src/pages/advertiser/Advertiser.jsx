@@ -6,33 +6,33 @@ import './Advertiser.css';
 import '../Home/Home.css';
 
 // Assets
-import heroBg from '../../assets/advertiserAssets/hero_advertiser.png';
-import idleTaxi from '../../assets/advertiserAssets/idle_taxi.png';
-import activeCar from '../../assets/advertiserAssets/active_car.png';
-import bowMaruallyJson from '../../assets/advertiserAssets/bowMarually.json';
-import advertiserVideo from '../../assets/advertiserAssets/advertiser.mp4';
+import heroBg from '/assets/advertiserAssets/hero_advertiser.png';
+import idleTaxi from '/assets/advertiserAssets/idle_taxi.png';
+import activeCar from '/assets/advertiserAssets/active_car.png';
+import bowMaruallyJson from '/assets/advertiserAssets/bowMarually.json?url';
+import advertiserVideo from '/assets/advertiserAssets/advertiser.mp4';
 
 // Parallax Desktop Assets
-import parallax1 from '../../assets/advertiserAssets/parallax1.png';
-import parallax2 from '../../assets/advertiserAssets/parallax2.png';
-import parallax3 from '../../assets/advertiserAssets/parallax3.png';
-import parallax4 from '../../assets/advertiserAssets/parallax4.png';
-import parallax5 from '../../assets/advertiserAssets/parallax5.png';
-import parallax6 from '../../assets/advertiserAssets/parallax6.png';
+import parallax1 from '/assets/advertiserAssets/parallax1.png';
+import parallax2 from '/assets/advertiserAssets/parallax2.png';
+import parallax3 from '/assets/advertiserAssets/parallax3.png';
+import parallax4 from '/assets/advertiserAssets/parallax4.png';
+import parallax5 from '/assets/advertiserAssets/parallax5.png';
+import parallax6 from '/assets/advertiserAssets/parallax6.png';
 
 // Parallax Mobile Assets
-import p1 from '../../assets/advertiserAssets/p1.png';
-import p2 from '../../assets/advertiserAssets/p2.png';
-import p3 from '../../assets/advertiserAssets/p3.png';
-import p4 from '../../assets/advertiserAssets/p4.png';
-import p5 from '../../assets/advertiserAssets/p5.png';
-import p6 from '../../assets/advertiserAssets/p6.png';
-import p7 from '../../assets/advertiserAssets/p7.png';
-import p8 from '../../assets/advertiserAssets/p8.png';
+import p1 from '/assets/advertiserAssets/p1.png';
+import p2 from '/assets/advertiserAssets/p2.png';
+import p3 from '/assets/advertiserAssets/p3.png';
+import p4 from '/assets/advertiserAssets/p4.png';
+import p5 from '/assets/advertiserAssets/p5.png';
+import p6 from '/assets/advertiserAssets/p6.png';
+import p7 from '/assets/advertiserAssets/p7.png';
+import p8 from '/assets/advertiserAssets/p8.png';
 
 // Footer social icons (from Home)
-import socialIcon1 from '../../assets/zB0X7.png';
-import socialIcon2 from '../../assets/ofqtO.png';
+import socialIcon1 from '/assets/zB0X7.png';
+import socialIcon2 from '/assets/ofqtO.png';
 
 const Advertiser = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -254,7 +254,7 @@ const Advertiser = () => {
       <footer className="footer">
         <div className="footer__inner">
           <div className="footer__logo">
-            <LottieAnimation animationPath="/src/assets/steering.json" />
+            <LottieAnimation animationPath="/assets/steering.json" />
           </div>
           <div className="footer__info">
             <span className="footer__brand">주식회사 마루디지털</span>

@@ -5,30 +5,30 @@ import LottieAnimation from '../../components/LottieAnimation';
 import './Driver.css';
 
 // Reusing assets from Home for Footer
-import socialIcon1 from '../../assets/zB0X7.png';
-import socialIcon2 from '../../assets/ofqtO.png';
+import socialIcon1 from '/assets/zB0X7.png';
+import socialIcon2 from '/assets/ofqtO.png';
 
 // Driver page assets
-import driverHeroUrl from '../../assets/driveAssets/driveHero.json?url';
-import googleIcon from '../../assets/1google.png';
-import appleIcon from '../../assets/1apple.png';
-import manycarmageUrl from '../../assets/driveAssets/manycar.png';
-import busAdUrl from '../../assets/driveAssets/busAd.png';
-import topcarAdUrl from '../../assets/driveAssets/topcarAD.png';
-import phoneDriverUrl from '../../assets/phoneDriver.json?url';
-import phoneStop from '../../assets/driveAssets/phoneStop.png';
+import driverHeroUrl from '/assets/driveAssets/driveHero.json?url';
+import googleIcon from '/assets/1google.png';
+import appleIcon from '/assets/1apple.png';
+import manycarmageUrl from '/assets/driveAssets/manycar.png';
+import busAdUrl from '/assets/driveAssets/busAd.png';
+import topcarAdUrl from '/assets/driveAssets/topcarAD.png';
+import phoneDriverUrl from '/assets/phoneDriver.json?url';
+import phoneStop from '/assets/driveAssets/phoneStop.png';
 
 // Import new SVG assets
-import signupIcon from '../../assets/driveAssets/1signup.svg';
-import shakeHandIcon from '../../assets/driveAssets/2shakeHand.svg';
-import signIcon from '../../assets/driveAssets/3sign.svg';
-import deliveryIcon from '../../assets/driveAssets/4delivery.svg';
-import stickerIcon from '../../assets/driveAssets/5sticker.svg';
-import carIcon from '../../assets/driveAssets/6driver.svg';
-import playCircleIcon from '../../assets/driveAssets/play_circle.svg';
-import sensorIcon from '../../assets/driveAssets/sensor.svg';
-import magnetIcon from '../../assets/driveAssets/magnet.svg';
-import formImage from '../../assets/driveAssets/formimage.png';
+import signupIcon from '/assets/driveAssets/1signup.svg';
+import shakeHandIcon from '/assets/driveAssets/2shakeHand.svg';
+import signIcon from '/assets/driveAssets/3sign.svg';
+import deliveryIcon from '/assets/driveAssets/4delivery.svg';
+import stickerIcon from '/assets/driveAssets/5sticker.svg';
+import carIcon from '/assets/driveAssets/6driver.svg';
+import playCircleIcon from '/assets/driveAssets/play_circle.svg';
+import sensorIcon from '/assets/driveAssets/sensor.svg';
+import magnetIcon from '/assets/driveAssets/magnet.svg';
+import formImage from '/assets/driveAssets/formimage.png';
 
 const Driver = () => {
   const [imageDataVisible, setImageDataVisible] = useState(false);
@@ -216,7 +216,7 @@ const Driver = () => {
       <footer className="footer">
         <div className="footer__inner">
           <div className="footer__logo">
-            <LottieAnimation animationPath="/src/assets/steering.json" />
+            <LottieAnimation animationPath="/assets/steering.json" />
           </div>
           <div className="footer__info">
             <span className="footer__brand">주식회사 마루디지털</span>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import navLogo from '../assets/purpleLogo.svg';
 import './TopNavBar.css';
 
 const TopNavBar = () => {
@@ -13,7 +12,7 @@ const TopNavBar = () => {
     <nav className={`top-navbar ${mobileOpen ? 'top-navbar--mobile-open' : ''}`}>
       <div className="top-navbar__inner">
         <Link to="/" className="top-navbar__logo">
-          <img src={navLogo} alt="Marually" />
+          <img src="/assets/purpleLogo.svg" alt="Marually" />
         </Link>
 
         <div className="top-navbar__links">

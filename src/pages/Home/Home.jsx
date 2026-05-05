@@ -2,49 +2,49 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import TopNavBar from '../../components/TopNavBar';
 import LottieAnimation from '../../components/LottieAnimation';
-import slide0 from '../../assets/slide0.png';
-import slide1 from '../../assets/slide1.png';
-import slide2 from '../../assets/slide2.png';
-import slide3 from '../../assets/slide3.png';
+import slide0 from '/assets/slide0.png';
+import slide1 from '/assets/slide1.png';
+import slide2 from '/assets/slide2.png';
+import slide3 from '/assets/slide3.png';
 import './Home.css';
 
 // Step card icons
-import iconStep1 from '../../assets/Pe5A2.png';
-import iconStep2 from '../../assets/3j7Wa.png';
-import iconStep3 from '../../assets/TRjMw.png';
-import iconStep4 from '../../assets/flgpM.png';
-import iconStep5 from '../../assets/vyO6E.png';
-import iconStep6 from '../../assets/Q6VqA.png';
+import iconStep1 from '/assets/Pe5A2.png';
+import iconStep2 from '/assets/3j7Wa.png';
+import iconStep3 from '/assets/TRjMw.png';
+import iconStep4 from '/assets/flgpM.png';
+import iconStep5 from '/assets/vyO6E.png';
+import iconStep6 from '/assets/Q6VqA.png';
 
 // Store badges
-import googlePlayIcon from '../../assets/1google.png';
-import appStoreIcon from '../../assets/1apple.png';
+import googlePlayIcon from '/assets/1google.png';
+import appStoreIcon from '/assets/1apple.png';
 
 // App feature icons
-import iconFeature1 from '../../assets/H8RWW.png';
-import iconFeature2 from '../../assets/9vcmF.png';
-import iconFeature3 from '../../assets/ED2Ui.png';
-import iconFeature4 from '../../assets/Gadru.png';
-import iconFeature5 from '../../assets/yrKgZ.png';
+import iconFeature1 from '/assets/H8RWW.png';
+import iconFeature2 from '/assets/9vcmF.png';
+import iconFeature3 from '/assets/ED2Ui.png';
+import iconFeature4 from '/assets/Gadru.png';
+import iconFeature5 from '/assets/yrKgZ.png';
 
 // Carousel feature card icons
-import iconCarousel1 from '../../assets/XchiG.png';
-import iconCarousel2 from '../../assets/POPSQ.png';
+import iconCarousel1 from '/assets/XchiG.png';
+import iconCarousel2 from '/assets/POPSQ.png';
 
 // Carousel navigation buttons
-import navBtnLeft from '../../assets/AHcLV.png';
-import navBtnRight from '../../assets/zx7LR.png';
+import navBtnLeft from '/assets/AHcLV.png';
+import navBtnRight from '/assets/zx7LR.png';
 
 // Carousel slide background
-import slideBg from '../../assets/aVXcY.png';
+import slideBg from '/assets/aVXcY.png';
 
 // Footer social icons
-import socialIcon1 from '../../assets/zB0X7.png';
-import socialIcon2 from '../../assets/ofqtO.png';
+import socialIcon1 from '/assets/zB0X7.png';
+import socialIcon2 from '/assets/ofqtO.png';
 
 // Logo
-import purpleLogo from '../../assets/purpleLogo.svg';
-import introImage from '../../assets/intro.png';
+import purpleLogo from '/assets/purpleLogo.svg';
+import introImage from '/assets/intro.png';
 
 
 function HeroLottie({ children }) {
@@ -52,7 +52,7 @@ function HeroLottie({ children }) {
     <div className="hero-lottie-outer">
       <div className="hero-lottie-inner">
         <LottieAnimation
-          animationPath="/src/assets/WebHeroSection.json"
+          animationPath="/assets/WebHeroSection.json"
           className="lottie-hero"
         />
         {children}
@@ -126,7 +126,7 @@ const Home = () => {
             <img src={introImage} alt="마루알리 플랫폼 소개" className="section-intro__desc-img" />
           </div>
           <div className="section-intro__image">
-            <LottieAnimation animationPath="/src/assets/0416driver.json" />
+            <LottieAnimation animationPath="/assets/0416driver.json" />
           </div>
         </div>
       </section>
@@ -290,7 +290,7 @@ const Home = () => {
       <section className="section-app">
         <div className="section-app__inner">
           <div className="section-app__phone">
-            <LottieAnimation animationPath="/src/assets/phoneDriver.json" />
+            <LottieAnimation animationPath="/assets/phoneDriver.json" />
           </div>
           <div className="section-app__content">
             <h2 className="section-app__title">마루알리 앱의 스마트한 경험</h2>
@@ -444,7 +444,7 @@ const Home = () => {
       <footer className="footer">
         <div className="footer__inner">
           <div className="footer__logo">
-            <LottieAnimation animationPath="/src/assets/steering.json" />
+            <LottieAnimation animationPath="/assets/steering.json" />
           </div>
           <div className="footer__info">
             <span className="footer__brand">주식회사 마루디지털</span>
