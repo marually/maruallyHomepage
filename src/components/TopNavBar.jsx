@@ -37,6 +37,13 @@ const TopNavBar = () => {
           >
             광고주
           </Link>
+          <Link
+            to="/billboard"
+            className={`top-navbar__link ${isActive('/billboard') ? 'top-navbar__link--active' : ''}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            광고판
+          </Link>
         </div>
 
         <Link to="/advertiser#request" className="top-navbar__cta">

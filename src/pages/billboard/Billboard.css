@@ -1,0 +1,9 @@
+.billboard-page {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.billboard-content {
+    padding-top: 100px;
+    text-align: center;
+}
