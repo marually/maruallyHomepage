@@ -1,9 +1,604 @@
+/* ===================================
+   Billboard Page — 광고 시트지 부착 가이드
+   =================================== */
+
+
+
+/* ── Base ── */
 .billboard-page {
-    min-height: 100vh;
-    background-color: #f8f9fa;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
+  color: #191c1d;
 }
 
-.billboard-content {
-    padding-top: 100px;
+.bb-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Section title ── */
+.bb-section-title {
+  font-family: 'Manrope', 'Noto Sans KR', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #191c1d;
+  margin: 0 0 32px 0;
+  letter-spacing: -0.02em;
+}
+
+/* ======================================================
+   Hero Section
+   ====================================================== */
+.bb-hero {
+  padding-top: 40px;
+  /* TopNavBar height */
+  background: #f8f9fa;
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.bb-hero__text {
+  padding: 40px 0;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.bb-hero__eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #191c1d;
+  background: #a8e063;
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 16px;
+}
+
+.bb-hero__title {
+  font-family: 'Manrope', 'Noto Sans KR', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #47A919;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+
+.bb-hero__images {
+  height: 100%;
+  min-height: 420px;
+  position: relative;
+}
+
+.bb-hero__lottie {
+  width: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ======================================================
+   Supplies Section
+   ====================================================== */
+.bb-supplies {
+  background: #f8f9fa;
+  padding: 20px 0;
+}
+
+.bb-supplies__grid {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f3f4f5;
+  box-shadow: 0 2px 12px rgba(25, 28, 29, 0.1);
+}
+
+.bb-supplies__card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 32px 36px;
+  background: #ffffff;
+}
+
+.bb-supplies__divider {
+  width: 1px;
+  background: #e1e3e4;
+  margin: 16px 0;
+  flex-shrink: 0;
+}
+
+.bb-supplies__icon {
+  font-size: 2rem;
+  color: #47a919;
+  font-variation-settings: 'FILL' 0, 'wght' 300;
+}
+
+.bb-supplies__label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6f7a67;
+  margin: 0;
+}
+
+.bb-supplies__value {
+  font-size: 1rem;
+  color: #191c1d;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ======================================================
+   Step-by-Step Photos Section (Carousel)
+   ====================================================== */
+.bb-steps {
+  padding: 72px 0;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+
+.bb-carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.bb-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 20px;
+}
+
+.bb-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.bb-carousel__item {
+  flex: 0 0 380px;
+  scroll-snap-align: center;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 876 / 1494;
+}
+
+.bb-carousel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.bb-carousel__controls {
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  right: -24px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.bb-carousel__btn {
+  background: #ffffff;
+  border: 1px solid #e1e3e4;
+  color: #191c1d;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  pointer-events: auto;
+}
+
+.bb-carousel__btn:hover {
+  background: #47a919;
+  color: #ffffff;
+  border-color: #47a919;
+}
+
+/* ======================================================
+   YouTube Guide Section
+   ====================================================== */
+.bb-youtube {
+  padding: 72px 0;
+  background: #f8f9fa;
+}
+
+.bb-youtube__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.bb-youtube__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bb-youtube__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(25, 28, 29, 0.1);
+}
+
+.bb-youtube__thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.bb-youtube__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.bb-youtube__card:hover .bb-youtube__thumb {
+  transform: scale(1.04);
+}
+
+.bb-youtube__play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(25, 28, 29, 0.25);
+  transition: background 0.2s ease;
+}
+
+.bb-youtube__card:hover .bb-youtube__play-btn {
+  background: rgba(25, 28, 29, 0.15);
+}
+
+.bb-youtube__play-btn .material-symbols-outlined {
+  font-size: 3.5rem;
+  color: #ffffff;
+  font-variation-settings: 'FILL' 1, 'wght' 400;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+.bb-youtube__info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+}
+
+.bb-youtube__icon {
+  font-size: 1.5rem;
+  color: #9600c8;
+  flex-shrink: 0;
+  font-variation-settings: 'FILL' 1, 'wght' 400;
+  margin-top: 2px;
+}
+
+.bb-youtube__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bb-youtube__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #191c1d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.bb-youtube__subtitle {
+  font-size: 0.82rem;
+  color: #6f7a67;
+  margin: 0;
+}
+
+/* Reward Notice */
+.bb-reward-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #ffffff;
+  border-left: 4px solid #9600c8;
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  box-shadow: 0 12px 32px rgba(25, 28, 29, 0.1);
+}
+
+.bb-reward-notice__icon {
+  font-size: 1.25rem;
+  color: #9600c8;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-variation-settings: 'FILL' 1, 'wght' 400;
+}
+
+.bb-reward-notice__text {
+  font-size: 0.9rem;
+  color: #3f4a39;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ======================================================
+   Magnet Billboard Section
+   ====================================================== */
+.bb-magnet {
+  padding: 72px 0;
+  background: #f8f9fa;
+}
+
+.bb-magnet__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+
+.bb-magnet__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+}
+
+.bb-magnet__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bb-magnet__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bb-magnet__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(25, 28, 29, 0.05);
+}
+
+.bb-magnet__item-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-variation-settings: 'FILL' 1, 'wght' 400;
+}
+
+.bb-magnet__item--green .bb-magnet__item-icon {
+  color: #47a919;
+}
+
+.bb-magnet__item--warning .bb-magnet__item-icon {
+  color: #9600c8;
+}
+
+.bb-magnet__item-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #191c1d;
+}
+
+/* Caution Box */
+.bb-caution {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 36px;
+  box-shadow: 0 2px 12px rgba(25, 28, 29, 0.06);
+}
+
+.bb-caution__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #191c1d;
+  margin: 0 0 20px 0;
+}
+
+.bb-caution__title-icon {
+  font-size: 1.4rem;
+  color: #ba1a1a;
+  font-variation-settings: 'FILL' 1, 'wght' 400;
+}
+
+.bb-caution__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bb-caution__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #3f4a39;
+  line-height: 1.6;
+}
+
+.bb-caution__bullet {
+  font-size: 1.2rem;
+  color: #ba1a1a;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+
+/* ======================================================
+   Responsive — Tablet (≤ 900px)
+   ====================================================== */
+@media (max-width: 900px) {
+  .bb-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .bb-hero__images {
+    min-height: 280px;
+    height: 280px;
+    position: relative;
+  }
+
+  .bb-hero__text {
+    padding: 96px 24px 40px;
     text-align: center;
+  }
+
+  .bb-supplies__grid {
+    flex-direction: column;
+  }
+
+  .bb-supplies__divider {
+    width: 100%;
+    height: 1px;
+    margin: 0 16px;
+  }
+
+  .bb-carousel__item {
+    flex: 0 0 130px;
+  }
+
+  .bb-youtube__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .bb-magnet__layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .bb-magnet__image-wrap {
+    max-width: 400px;
+    margin: 0 auto;
+    aspect-ratio: 3 / 2;
+  }
+}
+
+/* ======================================================
+   Responsive — Mobile (≤ 600px)
+   ====================================================== */
+@media (max-width: 600px) {
+  .bb-inner {
+    padding: 0 16px;
+  }
+
+  .bb-section-title {
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+  }
+
+  .bb-hero {
+    min-height: auto;
+  }
+
+  .bb-hero__text {
+    padding: 88px 20px 36px;
+  }
+
+  .bb-hero__title {
+    font-size: 1.8rem;
+  }
+
+  .bb-hero__images {
+    min-height: 220px;
+    height: 220px;
+  }
+
+  .bb-supplies {
+    padding: 32px 0;
+  }
+
+  .bb-supplies__card {
+    padding: 24px 20px;
+  }
+
+  .bb-steps {
+    padding: 48px 0;
+  }
+
+  .bb-carousel__controls {
+    display: none;
+  }
+
+  .bb-carousel__item {
+    flex: 0 0 42.5%;
+  }
+
+  .bb-youtube {
+    padding: 48px 0;
+  }
+
+  .bb-youtube__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bb-magnet {
+    padding: 48px 0;
+  }
+
+  .bb-magnet__layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .bb-magnet__image-wrap {
+    aspect-ratio: 16 / 9;
+  }
+
+  .bb-caution {
+    padding: 24px 20px;
+  }
+
 }

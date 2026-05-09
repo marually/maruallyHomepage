@@ -42,7 +42,7 @@ const TopNavBar = () => {
             className={`top-navbar__link ${isActive('/billboard') ? 'top-navbar__link--active' : ''}`}
             onClick={() => setMobileOpen(false)}
           >
-            광고판
+            광고부착
           </Link>
         </div>
 
