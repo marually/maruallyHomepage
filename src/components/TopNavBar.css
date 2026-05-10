@@ -1,13 +1,22 @@
 /* TopNavBar Shared Styles */
 .top-navbar {
   position: sticky;
-  top: 0;
+  top: 5px;
   z-index: 1000;
-  width: 100%;
-  background: rgba(244, 244, 245, 0.5);
+  width: auto;
+  margin: 5px 20px 0;
+  border-radius: 9999px;
+  background: rgba(247, 248, 247, 0.6);
   backdrop-filter: blur(21px);
   -webkit-backdrop-filter: blur(21px);
   box-shadow: 0 1px 1.75px rgba(0, 0, 0, 0.05);
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.top-navbar:hover,
+.top-navbar:focus-within {
+  border-color: #a8e063;
 }
 
 .top-navbar__inner {
@@ -21,7 +30,7 @@
 }
 
 .top-navbar__logo img {
-  height: 58px;
+  height: 50px;
   width: auto;
   object-fit: contain;
 }
@@ -92,7 +101,7 @@
   transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .top-navbar__inner {
     padding: 0 16px;
   }

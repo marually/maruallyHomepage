@@ -77,21 +77,20 @@ const Driver = () => {
 
       {/* 1. Hero Section */}
       <section className="driver-hero">
-        <div className="driver-hero__bg">
+        <div className="driver-hero__inner">
           <LottieAnimation animationPath={driverHeroUrl} className="lottie-driver-hero" />
-          <div className="driver-hero__overlay"></div>
-        </div>
-        <div className="driver-hero__content">
-          <h1 className="driver-hero__title">
-            <span className="text-highlight">‘마루알리’</span>어플을 설치하여<br />땀 없이 기쁨을 누리세요.
-          </h1>
-          <div className="driver-hero__buttons">
-            <button className="store-btn">
-              <img src={googleIcon} alt="Google Play" className="store-icon" />
-            </button>
-            <button className="store-btn">
-              <img src={appleIcon} alt="App Store" className="store-icon" />
-            </button>
+          <div className="driver-hero__content">
+            <h1 className="driver-hero__title">
+              <span className="text-highlight">‘마루알리’ </span>어플을 설치하여,<br /> 땀 없이 기쁨을 누리세요.
+            </h1>
+            <div className="driver-hero__buttons">
+              <button className="store-btn">
+                <img src={googleIcon} alt="Google Play" className="store-icon" />
+              </button>
+              <button className="store-btn">
+                <img src={appleIcon} alt="App Store" className="store-icon" />
+              </button>
+            </div>
           </div>
         </div>
       </section>

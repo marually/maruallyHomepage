@@ -47,27 +47,6 @@ import purpleLogo from '/assets/purpleLogo.svg';
 import introImage from '/assets/intro.png';
 
 
-function HeroLottie({ children }) {
-  return (
-    <div className="hero-lottie-outer">
-      <div className="hero-lottie-inner">
-        <LottieAnimation
-          animationPath="/assets/WebHeroSection.json"
-          className="lottie-hero"
-        />
-        {children}
-      </div>
-      <div className="hero-section__stores">
-        <div className="hero-section__store-left">
-          <img src={appStoreIcon} alt="App Store" className="hero-section__store-badge" />
-        </div>
-        <div className="hero-section__store-right">
-          <img src={googlePlayIcon} alt="Google Play" className="hero-section__store-badge" />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 const CAROUSEL_SLIDES = [
   {
@@ -105,15 +84,24 @@ const Home = () => {
 
       {/* ===== Hero Section ===== */}
       <section className="hero-section">
-        {/* HeroLottie가 Hero section 전체를 덮도록 heading도 내부로 이동 */}
-        <HeroLottie>
-          <div className="hero-section__heading">
-            <h1 className="hero-section__title">
-              차량 광고를 데이터로 측정하는 플랫폼
-            </h1>
-            <span className="hero-section__brand">마루알리</span>
-          </div>
-        </HeroLottie>
+        <LottieAnimation 
+          animationPath="/assets/DrivingCar.json" 
+          direction={-1} 
+          className="hero-section__bg-car" 
+        />
+        <div className="hero-section__header">
+          <h1 className="hero-section__title">
+            SmartPhone에 <span class="highlight">광고운행 데이터</span>를  담다.
+          </h1>
+          <div className="hero-section__brand">마루알리</div>
+        </div>
+        <div className="hero-section__store-links">
+          <img src={appStoreIcon} alt="App Store" className="hero-section__store-badge" />
+          <img src={googlePlayIcon} alt="Google Play" className="hero-section__store-badge" />
+        </div>
+        <div className="hero-section__lottie">
+          <LottieAnimation animationPath="/assets/2WebHeroSction.json" />
+        </div>
       </section>
 
       {/* ===== Section 1: Platform Introduction ===== */}

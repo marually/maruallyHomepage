@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
 
-const LottieAnimation = ({ animationPath, className = '', style = {} }) => {
+const LottieAnimation = ({ animationPath, className = '', style = {}, direction = 1 }) => {
     const containerRef = useRef(null);
     const animationRef = useRef(null);
 
@@ -23,6 +23,10 @@ const LottieAnimation = ({ animationPath, className = '', style = {} }) => {
                     preserveAspectRatio: 'xMidYMid slice'
                 }
             });
+
+            if (animationRef.current) {
+                animationRef.current.setDirection(direction);
+            }
         };
 
         // Check if animationPath is already a JSON object
@@ -43,7 +47,7 @@ const LottieAnimation = ({ animationPath, className = '', style = {} }) => {
                 animationRef.current.destroy();
             }
         };
-    }, [animationPath]);
+    }, [animationPath, direction]);
 
     return (
         <div
