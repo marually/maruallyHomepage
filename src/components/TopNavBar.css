@@ -10,8 +10,9 @@
   backdrop-filter: blur(21px);
   -webkit-backdrop-filter: blur(21px);
   box-shadow: 0 1px 1.75px rgba(0, 0, 0, 0.05);
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   transition: border-color 0.3s ease;
+
 }
 
 .top-navbar:hover,

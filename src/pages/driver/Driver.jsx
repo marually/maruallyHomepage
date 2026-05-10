@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import TopNavBar from '../../components/TopNavBar';
 import LottieAnimation from '../../components/LottieAnimation';
 import './Driver.css';
@@ -28,33 +28,38 @@ import carIcon from '/assets/driveAssets/6driver.svg';
 import playCircleIcon from '/assets/driveAssets/play_circle.svg';
 import sensorIcon from '/assets/driveAssets/sensor.svg';
 import magnetIcon from '/assets/driveAssets/magnet.svg';
+import stickerIcon2 from '/assets/driveAssets/sticker.svg';
 import formImage from '/assets/driveAssets/formimage.png';
 
 const Driver = () => {
   const [imageDataVisible, setImageDataVisible] = useState(false);
   const imageDataRef = useRef();
 
+  const [stickerVisible, setStickerVisible] = useState(false);
+  const stickerRef = useRef();
+
+  const [extraVisible, setExtraVisible] = useState(false);
+  const extraRef = useRef();
+
   useEffect(() => {
-    const currentRef = imageDataRef.current;
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setImageDataVisible(true);
-        } else {
-          // 2. 화면에서 완전히 나가면 false (이게 있어야 반복됩니다!)
-          setImageDataVisible(false);
+        if (entry.target === imageDataRef.current) {
+          setImageDataVisible(entry.isIntersecting);
+        } else if (entry.target === stickerRef.current) {
+          setStickerVisible(entry.isIntersecting);
+        } else if (entry.target === extraRef.current) {
+          setExtraVisible(entry.isIntersecting);
         }
       });
     }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
 
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
+    if (imageDataRef.current) observer.observe(imageDataRef.current);
+    if (stickerRef.current) observer.observe(stickerRef.current);
+    if (extraRef.current) observer.observe(extraRef.current);
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+      observer.disconnect();
     };
   }, []);
 
@@ -143,29 +148,28 @@ const Driver = () => {
       {/* 4. Billboard Guide */}
       <section className="driver-billboard">
         <div className="driver-billboard__header">
-          <h2 className="driver-billboard__title">버스 및 탑차에게 배송된 스티커 광고를 직접 부착시, <span className="text-primary">별도의 부착비를 드립니다.</span></h2>
+          <h2 className="driver-billboard__title">앱에서 계약후 차종에 따라 광고시트지 또는 자석 광고판으로 배송합니다.</h2>
         </div>
-        <div className="driver-billboard__grid">
-          <div className="driver-billboard__item">
-            <p className="driver-billboard__item-title">버스 스티커 광고 부착 방법_아래 그림을 클릭하세요.</p>
-            <a href="https://www.youtube.com/watch?v=lRmgmsqo-_g" target="_blank" rel="noreferrer" className="driver-billboard__video">
-              <img src={busAdUrl} alt="버스 스티커 광고 부착 방법" />
-              <div className="driver-billboard__video-overlay">
-                <img src={playCircleIcon} alt="Play" className="play-icon" />
-              </div>
-            </a>
+        <div className="driver-billboard__action">
+          <Link to="/billboard" className="driver-billboard__btn">광고 부착 방법</Link>
+        </div>
+        <div className="driver-billboard__sticker">
+          <div className="driver-billboard__sticker-icon">
+            <img src={stickerIcon2} alt="Sticker" className="sticker-icon" />
           </div>
-          <div className="driver-billboard__item">
-            <p className="driver-billboard__item-title">탑차 스티커 광고 부착 방법_아래 그림을 클릭하세요.</p>
-            <a href="https://www.youtube.com/watch?v=Fz9g-v7Uth4" target="_blank" rel="noreferrer" className="driver-billboard__video">
-              <img src={topcarAdUrl} alt="탑차 스티커 광고 부착 방법" />
-              <div className="driver-billboard__video-overlay">
-                <img src={playCircleIcon} alt="Play" className="play-icon" />
-              </div>
-            </a>
+          <div 
+            className={`driver-billboard__sticker-text fade-in ${stickerVisible ? 'is-visible' : ''}`}
+            ref={stickerRef}
+          >
+            <h3> 탑차와 버스에 광고시트지 배송 : <span className="text-primary">부착이 어려워 소정의 부착비를 드립니다.</span></h3>
+            <p>차량 외형에 맞게 제작후 배송된 광고 시트지는 부착 안내문과 '<a href="/billboard" className="text-primary">광고 부착 방법</a>' 을 참고하여 직접 부착하세요.
+              <br /> 시트지 부착후 좌, 우, 후면 사진을 찍은후 마루알리 어플에 업로드 하시면, 추후 소정의 부착비를 드립니다.</p>
           </div>
         </div>
-        <div className="driver-billboard__extra">
+        <div 
+          className={`driver-billboard__extra fade-in ${extraVisible ? 'is-visible' : ''}`}
+          ref={extraRef}
+        >
           <div className="driver-billboard__extra-icon">
             <img src={magnetIcon} alt="Magnet" className="magnet-icon" />
           </div>

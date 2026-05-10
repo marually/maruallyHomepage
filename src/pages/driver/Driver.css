@@ -24,7 +24,7 @@ h6,
 }
 
 .text-highlight {
-  color: #a8e063;
+  color: #9900CC;
 }
 
 /* 1. Hero Section */
@@ -40,7 +40,7 @@ h6,
   min-height: 600px;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 12px;
+  padding: 20px 0px;
   gap: 80px;
 }
 
@@ -60,21 +60,10 @@ h6,
 .driver-hero__content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
 
-.driver-hero__badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  background-color: rgba(71, 169, 25, 0.2);
-  color: #47A919;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
 
 .driver-hero__title {
   font-size: 2.7rem;
@@ -84,6 +73,8 @@ h6,
   margin-bottom: 40px;
   letter-spacing: 0.05em;
 }
+
+
 
 @media (max-width: 900px) {
   .driver-hero__inner {
@@ -98,7 +89,7 @@ h6,
   }
 
   .driver-hero__title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -212,7 +203,7 @@ h6,
 /* 3. Advertising Process */
 .driver-process {
   padding: 80px 0;
-  background-color: var(--bg-gray);
+  background-color: #f8f9fa;
   position: relative;
 }
 
@@ -354,7 +345,7 @@ h6,
 
 .driver-billboard {
   padding: 80px 0;
-  background-color: var(--bg-white);
+  background-color: #f8f9fa;
   position: relative;
 }
 
@@ -381,93 +372,49 @@ h6,
   }
 }
 
-.driver-billboard__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-@media (min-width: 900px) {
-  .driver-billboard__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.driver-billboard__item {
+.driver-billboard__action {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.driver-billboard__item-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #70039b;
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-.driver-billboard__video {
-  display: block;
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
-}
-
-.driver-billboard__video:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-}
-
-.driver-billboard__video img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.driver-billboard__video-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
   justify-content: center;
-  transition: background-color 0.3s;
+  margin-top: -32px;
+  margin-bottom: 32px;
 }
 
-.driver-billboard__video:hover .driver-billboard__video-overlay {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.play-icon {
+.driver-billboard__btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: linear-gradient(180deg, #4DAC1E 0%, #A8E063 100%);
   color: #ffffff;
-  font-size: 3rem;
-  opacity: 0.8;
-  transition: transform 0.3s;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(77, 172, 30, 0.3);
 }
 
-.driver-billboard__video:hover .play-icon {
-  transform: scale(1.1);
+.driver-billboard__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(77, 172, 30, 0.4);
 }
 
+.driver-billboard__sticker,
 .driver-billboard__extra {
   display: flex;
   align-items: flex-start;
-  background-color: #f3f4f5;
+  background-color: white;
   padding: 24px;
-  border-radius: 12px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px #d6d6d6;
   max-width: 1280px;
-  margin: 64px auto 0 auto;
+  margin: 0 auto;
   width: calc(100% - 64px);
 }
 
+.driver-billboard__extra {
+  margin-top: 24px;
+}
+
+.driver-billboard__sticker-icon,
 .driver-billboard__extra-icon {
   width: 40px;
   height: 40px;
@@ -480,11 +427,13 @@ h6,
   margin-right: 16px;
 }
 
+.driver-billboard__sticker-icon span,
 .driver-billboard__extra-icon span {
   color: #256d00;
   font-size: 1.25rem;
 }
 
+.driver-billboard__sticker-text h3,
 .driver-billboard__extra-text h3 {
   font-size: 1.35rem;
   font-weight: 700;
@@ -493,6 +442,7 @@ h6,
   margin-top: 0;
 }
 
+.driver-billboard__sticker-text p,
 .driver-billboard__extra-text p {
   color: #3f4a39;
   font-size: 1.2rem;

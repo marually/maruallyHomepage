@@ -256,79 +256,47 @@
 /* ---- Section Container 1: Platform Introduction ---- */
 .section-intro {
   width: 100%;
-  padding: 80px 0 10px 0;
+  padding: 100px 0 30px 0;
   background: #f8f9fa;
-}
-
-.section-intro__content {
   display: flex;
-  max-width: 1280px;
-  margin: 0 auto;
-  gap: 32px;
-  padding: 0 32px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.section-intro__text {
-  flex: 1;
-  margin-top: 50px;
+.section-intro__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 32px;
 }
 
 .section-intro__title {
   font-family: var(--font-main);
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 900;
-  color: var(--primary);
-  line-height: 1.6;
-  margin: 0 auto 20px;
+  color: #3F4A39;
+  line-height: 1.4;
+  margin: 20px 0 10px;
   text-align: center;
-  max-width: 1280px;
-  padding: 0 32px;
 }
 
 .section-intro__subtitle {
   font-family: var(--font-main);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  color: var(--text-body);
-  line-height: 1.1;
+  color: #191C1D;
+  line-height: 1.4;
   margin: 0 auto 20px;
   text-align: center;
-  max-width: 1280px;
-  padding: 0 10px;
 }
 
-.section-intro__desc {
-  font-family: var(--font-main);
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--text-body);
-  line-height: 1.625;
-  max-width: 589px;
-}
-
-.section-intro__desc-img {
+.section-intro__img {
   width: 100%;
-  max-width: 589px;
   height: auto;
-}
-
-.section-intro__image {
-  width: 481px;
-  height: 600px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0;
-}
-
-.section-intro__image img,
-.section-intro__image svg,
-.section-intro__image canvas {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 /* ---- Section Container 2: Platform Process (6 Steps) ---- */
@@ -448,7 +416,7 @@
   color: var(--text-dark);
   line-height: 1.2;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .section-carousel__subheading {
@@ -545,21 +513,6 @@
   right: 32px;
 }
 
-/*
-.carousel-btn {
-  width: 48px;
-  height: 48px;
-  background: #ffffff80;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 3.5px -2px rgba(0, 0, 0, 0.1), 0 4px 5.25px -1px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  border: none;
-  font-size: 20px;
-} 
-  */
 
 /* Pagination Dots */
 .section-carousel__dots {
@@ -631,7 +584,7 @@
   font-family: var(--font-main);
   font-size: 32px;
   font-weight: 900;
-  color: var(--primary);
+  color: #3F4A39;
   line-height: 1.2;
 }
 
@@ -1025,8 +978,8 @@
   .hero-section {
     width: 100%;
     height: 500px;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 50px 0;
+    padding: 30px 0;
   }
 
   .hero-lottie-outer,
@@ -1051,10 +1004,11 @@
   }
 
   .hero-section__title {
-    font-size: 20px;
+    font-size: 26px;
     line-height: 1.4;
     margin-bottom: 8px;
   }
+
 
   .hero-section__brand {
     font-size: 42px;
@@ -1072,37 +1026,24 @@
 
   /* Section Intro */
   .section-intro {
-    padding: 40px 16px 10x;
+    padding: 40px 16px 10px;
   }
 
-  .section-intro__content {
-    display: flex;
-    /* flexbox 활성화 */
-    flex-direction: column;
-    /* 세로 배치 */
-    align-items: center;
-    /* 가로 가운데 정렬 */
-    justify-content: center;
-    /* 세로 가운데 정렬 */
+  .section-intro__item {
     padding: 0;
-  }
-
-  .section-intro__text,
-  .section-intro__image {
-    text-align: center;
-    /* 내부 콘텐츠도 가운데 정렬 */
-    margin-top: 0;
-  }
-
-  .section-intro__image {
-    width: 80%;
   }
 
   .section-intro__title {
     font-size: 24px;
-    margin-bottom: 24px;
-    text-align: center;
-    /* 제목도 가운데 정렬 */
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 0 16px;
+  }
+
+  .section-intro__subtitle {
+    font-size: 16px;
+    padding: 0 16px;
+    text-align: left;
   }
 
 

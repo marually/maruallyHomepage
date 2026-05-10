@@ -208,7 +208,7 @@ const Billboard = () => {
       {/* ── 자석광고판 안내 Section ── */}
       <section className="bb-magnet">
         <div className="bb-inner">
-          <h2 className="bb-section-title">자석광고판 부착 안내</h2>
+          <h2 className="bb-section-title">자석광고판 부착 안내(택시 ㆍ승용ㆍ승합차)</h2>
           <div className="bb-magnet__layout">
             <div className="bb-magnet__image-wrap">
               <img

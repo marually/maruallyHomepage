@@ -123,7 +123,7 @@ const Advertiser = () => {
               <div className="vs-card__image">
                 <img src={idleTaxi} alt="차고지 멈춘차" />
               </div>
-              <h3 className="vs-card__title">차고지 멈춘차에도 광고비 지불?</h3>
+              <h3 className="vs-card__title">차고지 운휴차에도 광고비 지불?</h3>
             </div>
 
             {/* Center: VS */}
