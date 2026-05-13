@@ -8,6 +8,10 @@ import slide2 from '/assets/slide2.png';
 import slide3 from '/assets/slide3.png';
 import './Home.css';
 
+//Section 1 images
+import catLogo from '/assets/catLogo.svg';
+import greenLogo from '/assets/greenLogo.svg';
+
 // Step card icons
 import iconStep1 from '/assets/Pe5A2.png';
 import iconStep2 from '/assets/3j7Wa.png';
@@ -106,16 +110,19 @@ const Home = () => {
 
       {/* ===== Section 1: Platform Introduction ===== */}
       <section className="section-intro">
+        <h2 className="section-intro__main-title">마루알리 앱의 특징</h2>
         <div className="section-intro__item">
-          <h2 className="section-intro__title"> 앱 특징1 : 광고차량 탑승 하차 감지하여 앱이 자동 OnㆍOff</h2>
-          <p className="section-intro__subtitle">운전자가 광고차량 탑승시 운전자 폰의 마루아릴 앱이 자동으로 켜져 광고판의 노출지역과 시간 데이터 수집<br />
-            하차시  앱이 자동 종료되어 광고 운행중에만 데이터를 수집, 운전자가 아닌 광고판을 위치추적</p>
+          <div className="section-intro__header">
+            <img src={catLogo} alt="Cat Logo" className="section-intro__small-logo" />
+            <h2 className="section-intro__title2">광고차량 탑승 하차 감지하여 앱이 자동 OnㆍOff</h2>
+          </div>
           <img src="/assets/auto_onoff.gif" alt="Auto On/Off" className="section-intro__img" />
         </div>
         <div className="section-intro__item">
-          <h2 className="section-intro__title">앱 특징2 : 광고판 탈착시 및 부정확 부착시 광고비에서 제외</h2>
-          <p className="section-intro__subtitle">광고판에 설치된 비콘 모듈에 센서가 내장되어 있어 광고판이 제대로 부착되지 않으면 이상 데이터 감지
-            <br /> 또한, 운전자가 고의로 광고판에서 비콘모듈을 분리하면, 이상 데이터가 감지되어 광고비에서 제외합니다. </p>
+          <div className="section-intro__header">
+            <img src={greenLogo} alt="Green Logo" className="section-intro__small-logo" />
+            <h2 className="section-intro__title2">앱이 센서로 광고판 탈착 및 Abusing 등을 감지</h2>
+          </div>
           <img src="/assets/sensor.gif" alt="Sensor" className="section-intro__img" />
         </div>
       </section>

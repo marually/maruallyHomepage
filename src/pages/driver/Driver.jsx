@@ -119,7 +119,7 @@ const Driver = () => {
       {/* 3. Advertising Process */}
       <section className="driver-process">
         <div className="driver-process__header">
-          <h2 className="driver-process__title">어플에서 광고주와의 매칭과 광고계약 등이 이루어져 간편</h2>
+          <h2 className="driver-process__title">어플에서 광고주와의 매칭 및 광고계약 등이 이루어져 간편</h2>
           <p className="driver-process__subtitle">스마트폰 하나로 모든 과정이 진행됩니다. 마루알리 앱의 광고활동 자동 측정으로 쉽고 편안하게 광고 수익 창출을 시작하세요.</p>
         </div>
         <div className="driver-process__grid">
@@ -157,7 +157,7 @@ const Driver = () => {
           <div className="driver-billboard__sticker-icon">
             <img src={stickerIcon2} alt="Sticker" className="sticker-icon" />
           </div>
-          <div 
+          <div
             className={`driver-billboard__sticker-text fade-in ${stickerVisible ? 'is-visible' : ''}`}
             ref={stickerRef}
           >
@@ -166,7 +166,7 @@ const Driver = () => {
               <br /> 시트지 부착후 좌, 우, 후면 사진을 찍은후 마루알리 어플에 업로드 하시면, 추후 소정의 부착비를 드립니다.</p>
           </div>
         </div>
-        <div 
+        <div
           className={`driver-billboard__extra fade-in ${extraVisible ? 'is-visible' : ''}`}
           ref={extraRef}
         >
@@ -193,7 +193,7 @@ const Driver = () => {
               <img src={sensorIcon} alt="Sensor" className="sensor-icon" />
             </div>
             <h2 className="driver-app__title">어플이 탑승과 하차를 감지하여 <br />자동으로 광고운행 기록하여 편리</h2>
-            <p className="driver-app__desc">운전자가 일일이 앱을 켜고 끌 필요가 없습니다. <br />운전자의 스마트폰과 광고판의 비콘과의 연동을 통해 탑승과 하차를 자동으로 감지.</p>
+            <p className="driver-app__desc">운전자가 일일이 앱을 켜고 끌 필요가 없습니다. <br />운전자의 스마트폰과 광고판의 비콘 연동으로 탑승과 하차를 자동 감지.</p>
           </div>
           <div className="driver-app__right">
             <img src={phoneStop} alt="Phone Stop" className="driver-phone-stop" />

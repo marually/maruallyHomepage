@@ -31,6 +31,7 @@ h6,
 .driver-hero {
   width: 100%;
   background-color: #f8f9fa;
+  padding: 70px 0 0 0;
 }
 
 .driver-hero__inner {
@@ -68,7 +69,7 @@ h6,
 .driver-hero__title {
   font-size: 2.7rem;
   font-weight: 800;
-  color: #191c1d;
+  color: #3F4A39;
   line-height: 1.3;
   margin-bottom: 40px;
   letter-spacing: 0.05em;
@@ -79,7 +80,7 @@ h6,
 @media (max-width: 900px) {
   .driver-hero__inner {
     grid-template-columns: 1fr;
-    padding: 60px 20px;
+    padding: 60px 10px;
     gap: 32px;
   }
 
@@ -89,7 +90,8 @@ h6,
   }
 
   .driver-hero__title {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
+    line-height: 1.3;
   }
 }
 
@@ -134,7 +136,7 @@ h6,
 
 /* 2. Data Measurement Section */
 .driver-data {
-  padding: 80px 0;
+  padding: 60px 0;
   background-color: #f8f9fa;
   position: relative;
   overflow: hidden;
@@ -161,31 +163,41 @@ h6,
 }
 
 .driver-data__title {
-  font-size: 2.25rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #191c1d;
   margin-bottom: 24px;
   letter-spacing: -0.025em;
   line-height: 1.2;
+  text-align: left;
+}
+
+.driver-data__desc {
+  color: #3f4a39;
+  font-size: 1rem;
+  /* max-width: 768px; */
+  /* margin: 0 auto 48px auto; */
+  line-height: 1.625;
+  text-align: left;
 }
 
 @media (min-width: 900px) {
   .driver-data__title {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    text-align: center;
   }
+
+  .driver-data__desc {
+    text-align: center;
+  }
+
 
   .mobile-break {
     display: none;
   }
 }
 
-.driver-data__desc {
-  color: #3f4a39;
-  font-size: 1rem;
-  max-width: 768px;
-  margin: 0 auto 48px auto;
-  line-height: 1.625;
-}
 
 .driver-data__image-wrapper {
   position: relative;
@@ -215,24 +227,30 @@ h6,
 }
 
 .driver-process__title {
-  font-size: 2.0rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--secondary-color);
   margin-bottom: 24px;
   letter-spacing: -0.025em;
   line-height: 1.2;
+  text-align: left;
 }
 
 @media (min-width: 900px) {
   .driver-process__title {
-    font-size: 2.0rem;
+    font-size: 1.8rem;
     line-height: 1.5;
+    text-align: center;
+  }
+
+  .driver-process__subtitle {
+    text-align: center;
   }
 }
 
 .driver-process__subtitle {
   color: var(--secondary-color);
-  font-size: 1.125rem;
+  font-size: 1.0rem;
   line-height: 1.6;
 }
 
@@ -359,16 +377,18 @@ h6,
 }
 
 .driver-billboard__title {
-  font-size: 2.0rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #191c1d;
-  letter-spacing: -0.025em;
-  line-height: 1.3;
+  /* letter-spacing: -0.03em; */
+  line-height: 1.4;
+  text-align: left;
 }
 
 @media (min-width: 900px) {
   .driver-billboard__title {
-    font-size: 2.0rem;
+    font-size: 1.8rem;
+    text-align: center;
   }
 }
 
@@ -653,18 +673,19 @@ h6,
 }
 
 .driver-app__title {
-  font-size: 2.25rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #256d00;
   margin-bottom: 24px;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  line-height: 1.4;
+  text-align: left;
 }
 
 @media (min-width: 900px) {
   .driver-app__title {
-    font-size: 2.0rem;
+    font-size: 1.8rem;
     line-height: 1.4;
+    text-align: center;
   }
 }
 
@@ -676,6 +697,7 @@ h6,
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+  text-align: left;
 }
 
 /* Fade-in 애니메이션 스타일 */

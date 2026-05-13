@@ -142,12 +142,12 @@ const Advertiser = () => {
 
           <div className="vs-explanation">
             <h4 className="vs-explanation__title">
-              아직도 차고지에 쉬는 택시에도 광고비를 지급하십니까?
+              아직도 운휴차에도 광고비를 지급하십니까?
             </h4>
             <p className="vs-explanation__text">
-              법인 택시의 <span className="text-primary font-bold">70%</span>는 기사 구인난으로 차고지에 쉬고 있습니다. <br />
-              IT기술이 없어, 광고운행 여부와 상관없이 광고비를 지급해야 하는  현행 과금 방식에서는 <br />
-              광고비 지급 즉시  <span className="text-error font-bold">70% 손실</span>이 발생합니다.
+              법인 택시의 <span className="text-primary font-bold">70%</span>, 버스의 20%는 기사 구인난으로 차고지에 쉬고 있습니다. <br />
+              데이터가 없어, 운행과 상관없이 광고판만 부착 하면 광고비를 지급해야 하는 현행 방식에서는<br />
+              <span className="text-error font-bold">광고계약한 순간 70%~20% 손실</span>이 발생합니다.
             </p>
           </div>
         </div>
