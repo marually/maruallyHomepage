@@ -95,7 +95,7 @@ const Billboard = () => {
       {/* ── Hero Section ── */}
       <section className="bb-hero">
         <div className="bb-hero__text">
-          <span className="bb-hero__eyebrow">마루알리 드라이버 가이드</span>
+          <span className="bb-hero__eyebrow">마루알리 광고부착 가이드</span>
           <h1 className="bb-hero__title">광고 시트 부착방법</h1>
         </div>
         <div className="bb-hero__images">

@@ -161,12 +161,19 @@ h6 {
   }
 
   .vs-explanation__title {
-    font-size: 2.0rem;
+    font-size: 1.5rem;
+    text-align: left;
   }
 
   .vs-explanation__text {
     font-size: 1rem;
     text-align: left;
+  }
+
+  .vs-card__title {
+    color: #ffffff;
+    font-size: 1.45rem;
+    font-weight: 700;
   }
 }
 
@@ -258,6 +265,10 @@ h6 {
 }
 
 @media (max-width: 900px) {
+  .advertiser-fee__title {
+    font-size: 1.7rem;
+  }
+
   .fee-grid {
     grid-template-columns: 1fr;
   }
@@ -313,13 +324,13 @@ h6 {
 
 @media (max-width: 900px) {
   .advertiser-dashboard__title {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
   }
 }
 
 /* 5. Request Section */
 .advertiser-request {
-  padding: 40px 24px;
+  padding: 30px 24px;
   background-color: #f3f4f5;
 }
 
@@ -348,7 +359,7 @@ h6 {
 
 .advertiser-request__title {
   font-size: 2.0rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 16px;
   text-align: center;
 }
@@ -378,10 +389,11 @@ h6 {
   }
 
   .advertiser-request__title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .request-lottie {
-    width: 60%;
+    width: 65%;
+    height: auto;
   }
 }

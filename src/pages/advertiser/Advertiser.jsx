@@ -206,7 +206,7 @@ const Advertiser = () => {
       <section className="advertiser-dashboard">
         <div className="advertiser-dashboard__inner">
           <h2 className="advertiser-dashboard__title">
-            캠페인 별로 광고주님에게 실시간 Dashboard 제공
+            캠페인 별로 광고주님에게<br /> 실시간 Dashboard 제공
           </h2>
           <div className="dashboard-preview">
             <div className="dashboard-preview__wrapper">

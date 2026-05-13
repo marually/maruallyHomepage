@@ -95,7 +95,7 @@ const Home = () => {
         />
         <div className="hero-section__header">
           <h1 className="hero-section__title">
-            스마트폰에 <span class="highlight">광고운행 데이터</span>를  담다.
+            폰에 <span class="highlight">광고운행 데이터</span>를  담다.
           </h1>
           <div className="hero-section__brand">마루알리</div>
         </div>

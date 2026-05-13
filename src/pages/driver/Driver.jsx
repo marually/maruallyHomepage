@@ -86,7 +86,7 @@ const Driver = () => {
           <LottieAnimation animationPath={driverHeroUrl} className="lottie-driver-hero" />
           <div className="driver-hero__content">
             <h1 className="driver-hero__title">
-              <span className="text-highlight">‘마루알리’ </span>어플을 설치하여,<br /> 땀 없이 기쁨을 누리세요.
+              <span className="text-primary">‘마루알리’ </span>어플을 설치하여,<br /> 땀 없이 기쁨을 누리세요.
             </h1>
             <div className="driver-hero__buttons">
               <button className="store-btn">

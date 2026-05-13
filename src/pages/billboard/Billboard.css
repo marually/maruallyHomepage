@@ -540,7 +540,7 @@
 }
 
 /* ======================================================
-   Responsive — Mobile (≤ 600px)
+   Responsive — Mobile (≤ 900px)
    ====================================================== */
 @media (max-width: 900px) {
   .bb-inner {
@@ -548,7 +548,7 @@
   }
 
   .bb-section-title {
-    font-size: 1.35rem;
+    font-size: 2.0rem;
     margin-bottom: 20px;
     text-align: center;
   }
