@@ -26,6 +26,7 @@
   color: #191c1d;
   margin: 0 0 32px 0;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 /* ======================================================
@@ -64,7 +65,7 @@
 
 .bb-hero__title {
   font-family: 'Manrope', 'Noto Sans KR', sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: 2.5rem;
   font-weight: 800;
   color: #47A919;
   margin: 0 0 16px 0;
@@ -371,6 +372,11 @@
   margin-bottom: 48px;
 }
 
+.magnet-sub-title {
+  font-size: 1.25rem;
+  color: #6f7a67;
+  margin-left: 8px;
+}
 
 .bb-magnet__image {
   width: 100%;
@@ -485,6 +491,8 @@
 
   .bb-hero__title {
     font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 30px
   }
 
   .bb-hero__images {
@@ -495,7 +503,7 @@
     justify-content: center;
     /* 가로 중앙 정렬 */
     align-items: center;
-
+    margin-bottom: 30px
   }
 
   .bb-hero__text {
@@ -548,9 +556,9 @@
   }
 
   .bb-section-title {
-    font-size: 2.0rem;
+    font-size: 1.7rem;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
   }
 
   .bb-hero {
@@ -561,9 +569,6 @@
     padding: 88px 20px 36px;
   }
 
-  .bb-hero__title {
-    font-size: 1.8rem;
-  }
 
   .bb-hero__images {
     min-height: 220px;

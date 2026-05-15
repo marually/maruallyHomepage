@@ -196,7 +196,7 @@
 
 .hero-section__title {
   font-family: var(--font-main);
-  font-size: 32px;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 12px;
@@ -296,7 +296,7 @@
 
 .section-intro__main-title {
   font-family: var(--text-dark);
-  font-size: 1.6rem;
+  font-size: 2.0rem;
   font-weight: 900;
   color: #3F4A39;
   line-height: 1.2;
@@ -1074,7 +1074,9 @@
     padding: 0 16px;
   }
 
-
+  .section-intro__main-title {
+    font-size: 1.6rem;
+  }
 
 
   /* Process */

@@ -237,7 +237,7 @@ h6,
   }
 
   .driver-process__subtitle {
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -245,6 +245,7 @@ h6,
   color: var(--secondary-color);
   font-size: 1.0rem;
   line-height: 1.6;
+  text-align: center;
 }
 
 .driver-process__grid {
@@ -458,7 +459,7 @@ h6,
 .driver-billboard__sticker-text p,
 .driver-billboard__extra-text p {
   color: #3f4a39;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
 }

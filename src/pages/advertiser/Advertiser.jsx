@@ -123,7 +123,7 @@ const Advertiser = () => {
               <div className="vs-card__image">
                 <img src={idleTaxi} alt="차고지 멈춘차" />
               </div>
-              <h3 className="vs-card__title">차고지 운휴차에도 광고비 지불?</h3>
+              <h3 className="vs-card__title">광고를 부착만 하면,<br />차고지 운휴차에도 광고비 지불?</h3>
             </div>
 
             {/* Center: VS */}
@@ -136,7 +136,7 @@ const Advertiser = () => {
               <div className="vs-card__image">
                 <img src={activeCar} alt="운행데이터 기반 측정" />
               </div>
-              <h3 className="vs-card__title">데이터로 운행한 만큼 광고비 지불!</h3>
+              <h3 className="vs-card__title">데이터 기반으로<br />광고운행한 만큼만 광고비 지불!</h3>
             </div>
           </div>
 
@@ -157,6 +157,10 @@ const Advertiser = () => {
       <section className="advertiser-fee">
         <div className="advertiser-fee__inner">
           <h2 className="advertiser-fee__title">마루알리 광고비 정산 시스템</h2>
+          <p className="advertiser-fee__desc">
+            유동인구가 많은 지역에 오래 광고운행 할수록 광고비가 높아지는 합리적 구조입니다. <br />
+            광고판 면적과 유동인구에 따른 지역별 단가, 해당 지역 광고시간을 곱하여 광고비가 산정됩니다.
+          </p>
           <div className="fee-formula">
             <p className="fee-formula__text">
               광고비 = 광고판 면적 X 유동인구에 따른 지역별 단가 X 해당 지역 광고시간
@@ -206,7 +210,7 @@ const Advertiser = () => {
       <section className="advertiser-dashboard">
         <div className="advertiser-dashboard__inner">
           <h2 className="advertiser-dashboard__title">
-            캠페인 별로 광고주님에게<br /> 실시간 Dashboard 제공
+            광고 캠페인 별로 광고주님에게 실시간 Dashboard 제공
           </h2>
           <div className="dashboard-preview">
             <div className="dashboard-preview__wrapper">

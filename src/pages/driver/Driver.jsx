@@ -103,7 +103,7 @@ const Driver = () => {
       {/* 2. Data Measurement Section */}
       <section className="driver-data">
         <div className="driver-data__inner">
-          <h2 className="driver-data__title">데이터로 측정하여<br className="mobile-break" /> 모든 차량이 광고 할 수 있습니다.</h2>
+          <h2 className="driver-data__title">IoT으로 광고판의 이동데이터를 수집,<br className="mobile-break" /> 모든 차량이 광고 할 수 있습니다.</h2>
           <p className="driver-data__desc">
             마루알리는 데이터로 광고운행을 측정하므로 어떤 차종이든 최적의 광고주와 매칭되어 기사님의 수익을 창출합니다.<br /> 현재는 옥외광고물법상 허용되는 영업용차, 렌터카가 차량광고 할 수 있습니다.
           </p>
@@ -192,7 +192,7 @@ const Driver = () => {
               <div className="sensor-ring"></div>
               <img src={sensorIcon} alt="Sensor" className="sensor-icon" />
             </div>
-            <h2 className="driver-app__title">어플이 탑승과 하차를 감지하여 <br />자동으로 광고운행 기록하여 편리</h2>
+            <h2 className="driver-app__title">어플이 운전자 폰의 탑승과 하차를 감지하여 자동으로 광고운행 기록, 편리</h2>
             <p className="driver-app__desc">운전자가 일일이 앱을 켜고 끌 필요가 없습니다. <br />운전자의 스마트폰과 광고판의 비콘 연동으로 탑승과 하차를 자동 감지.</p>
           </div>
           <div className="driver-app__right">
@@ -209,7 +209,8 @@ const Driver = () => {
           </div>
           <div className="driver-googleform__right">
             <div className="driver-googleform__iframe-wrapper">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBWMp4LSXsl5l-AoHO668t0e7oR1M7m3ahe6UurhdQCwHTsA/viewform?embedded=true" width="640" height="587" frameborder="0" marginheight="0" marginwidth="0" title="Google Form">로드 중…</iframe>
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBWMp4LSXsl5l-AoHO668t0e7oR1M7m3ahe6UurhdQCwHTsA/viewform?embedded=true"
+                width="640" height="912" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>
             </div>
           </div>
         </div>

@@ -95,7 +95,7 @@ const Home = () => {
         />
         <div className="hero-section__header">
           <h1 className="hero-section__title">
-            폰에 <span class="highlight">광고운행 데이터</span>를  담다.
+            폰에 <span class="highlight">광고이동 데이터</span>를  담다.
           </h1>
           <div className="hero-section__brand">마루알리</div>
         </div>
@@ -130,9 +130,9 @@ const Home = () => {
       {/* ===== Section 2: Platform Process (6 Steps) ===== */}
       <section className="section-process">
         <div className="section-process__header">
-          <h2 className="section-process__title">운전자의 플랫폼 프로세스</h2>
+          <h2 className="section-process__title">운전자 전용App_마루알리 프로세스</h2>
           <p className="section-process__subtitle">
-            광고계약부터 데이터 측정까지, 마루알리의 6단계 프로세스
+            광고매칭부터 광고판의 이동데이터 측정까지 전 과정이 앱에서 이루어지는, 마루알리의 6단계 프로세스
           </p>
         </div>
         <div className="section-process__grid">

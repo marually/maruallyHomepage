@@ -192,7 +192,15 @@ h6 {
   font-size: 2.0rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 10px;
+}
+
+.advertiser-fee__desc {
+  font-size: 1.0rem;
+  color: #3f4a39;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .fee-formula {
@@ -269,6 +277,11 @@ h6 {
     font-size: 1.7rem;
   }
 
+  .advertiser-fee__desc {
+    text-align: left;
+  }
+
+
   .fee-grid {
     grid-template-columns: 1fr;
   }
@@ -280,12 +293,12 @@ h6 {
 
 /* 4. Dashboard Section */
 .advertiser-dashboard {
-  padding: 60px 24px;
+  padding: 60px 14px;
   background-color: #f3f4f5;
 }
 
 .advertiser-dashboard__inner {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   text-align: center;
 }
@@ -293,12 +306,12 @@ h6 {
 .advertiser-dashboard__title {
   font-size: 2.0rem;
   font-weight: 700;
-  margin-bottom: 64px;
+  margin-bottom: 34px;
 }
 
 .dashboard-preview {
   background-color: #ffffff;
-  padding: 24px;
+  padding: 14px;
   border-radius: 32px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   max-width: 1000px;
@@ -318,7 +331,7 @@ h6 {
 
 .dashboard-preview__video {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
