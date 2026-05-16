@@ -110,7 +110,7 @@ const Home = () => {
 
       {/* ===== Section 1: Platform Introduction ===== */}
       <section className="section-intro">
-        <h2 className="section-intro__main-title"><span className="intro-titlesub">운전자 전용 App </span>마루알리의 특징</h2>
+        <h2 className="section-intro__main-title">마루알리 앱<span className="intro-titlesub">(운전자 전용)</span>의 특징</h2>
         <div className="section-intro__item">
           <div className="section-intro__header">
             <img src={catLogo} alt="Cat Logo" className="section-intro__small-logo" />
