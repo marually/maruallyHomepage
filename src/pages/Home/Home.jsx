@@ -95,7 +95,7 @@ const Home = () => {
         />
         <div className="hero-section__header">
           <h1 className="hero-section__title">
-            폰에 <span class="highlight">광고이동 데이터</span>를  담다.
+            폰에 <span class="highlight">광고운행 데이터</span>를  담다
           </h1>
           <div className="hero-section__brand">마루알리</div>
         </div>
@@ -110,18 +110,18 @@ const Home = () => {
 
       {/* ===== Section 1: Platform Introduction ===== */}
       <section className="section-intro">
-        <h2 className="section-intro__main-title">마루알리 앱의 특징</h2>
+        <h2 className="section-intro__main-title"><span className="intro-titlesub">운전자 전용 App </span>마루알리의 특징</h2>
         <div className="section-intro__item">
           <div className="section-intro__header">
             <img src={catLogo} alt="Cat Logo" className="section-intro__small-logo" />
-            <h2 className="section-intro__title2">광고차량 탑승 하차 감지하여 앱이 자동 OnㆍOff</h2>
+            <h2 className="section-intro__title2">광고부착 차량에 마루알리 앱을 설치한 운전자의 탑승ㆍ하차 감지하여 앱이 자동 OnㆍOff</h2>
           </div>
           <img src="/assets/auto_onoff.gif" alt="Auto On/Off" className="section-intro__img" />
         </div>
         <div className="section-intro__item">
           <div className="section-intro__header">
             <img src={greenLogo} alt="Green Logo" className="section-intro__small-logo" />
-            <h2 className="section-intro__title2">앱이 센서로 광고판 탈착 및 Abusing 등을 감지</h2>
+            <h2 className="section-intro__title2">앱이 광고판에 설치된 IoT센서를 통해 광고판 탈착 및 Abusing 등을 감지</h2>
           </div>
           <img src="/assets/sensor.gif" alt="Sensor" className="section-intro__img" />
         </div>
@@ -130,9 +130,9 @@ const Home = () => {
       {/* ===== Section 2: Platform Process (6 Steps) ===== */}
       <section className="section-process">
         <div className="section-process__header">
-          <h2 className="section-process__title">운전자 전용App_마루알리 프로세스</h2>
+          <h2 className="section-process__title">마루알리 프로세스</h2>
           <p className="section-process__subtitle">
-            광고매칭부터 광고판의 이동데이터 측정까지 전 과정이 앱에서 이루어지는, 마루알리의 6단계 프로세스
+            광고주와 운전자 매칭부터 광고판의 이동데이터 측정까지 전 과정이 앱에서 이루어지는, 마루알리의 6단계 프로세스
           </p>
         </div>
         <div className="section-process__grid">
@@ -204,7 +204,7 @@ const Home = () => {
         <div className="section-carousel__inner">
           <h2 className="section-carousel__heading">마루알리의 특별한 경쟁력</h2>
           <h3 className="section-carousel__subheading">
-            * 국내 특허등록(2건) 1019864190000, 1029590700000 * 미국특허등록 16477856<br /> * 국내 상표권 4020021508037 * 미국상표권 5,964,888
+            * 국내 특허등록(2건) 1019864190000, 1029590700000 / 미국특허등록 16477856<br /> * 국내 상표권 4020021508037 / 미국상표권 5,964,888
           </h3>
           <div className="section-carousel__viewport">
             {/* Slide background image */}
@@ -298,7 +298,7 @@ const Home = () => {
                 <div className="app-feature__text">
                   <h4 className="app-feature__name">앱에서 광고 매칭 및 계약</h4>
                   <p className="app-feature__desc">
-                    앱 내에서 실시간으로 광고를 매칭하고 간편하게 전자 계약을 체결합니다.
+                    앱에서 광고주와 운전자를 매칭되면, 운전자는 간편하게 전자 계약을 체결합니다.
                   </p>
                 </div>
               </div>
@@ -357,7 +357,7 @@ const Home = () => {
           <div className="section-compare__header">
             <h2 className="section-compare__title">왜 마루알리인가요?</h2>
             <p className="section-compare__subtitle">
-              기존 차량광고와 비교하여 높은 투명성과 효율을 경험해보세요!
+              기존 차량광고에서 볼수 없는 데이터 기반의 높은 투명성과 예산절감을 경험해보세요!
             </p>
           </div>
           <div className="section-compare__table">
@@ -368,19 +368,19 @@ const Home = () => {
                 <div className="compare-item">
                   <span className="compare-item__icon compare-item__icon--x">✕</span>
                   <span className="compare-item__text">
-                    법인 택시 광고계약 즉시, 70% 손실(택시 운행율 30%수준)
+                    광고판 부착만 하면 운행여부와 상관없이 광고비 지급
                   </span>
                 </div>
                 <div className="compare-item">
                   <span className="compare-item__icon compare-item__icon--x">✕</span>
                   <span className="compare-item__text">
-                    광고효과 보고서 없음 (데이터 측정 불가능)
+                    광고 데이터 및 광고효과 보고서 없음
                   </span>
                 </div>
                 <div className="compare-item">
                   <span className="compare-item__icon compare-item__icon--x">✕</span>
                   <span className="compare-item__text">
-                    데이터가 없어 매일 운행 시내 버스에 차량 광고 집중화
+                    데이터가 없어 매일 운행 시내버스에 차량 광고 집중(버스 운휴율 10~20%)
                   </span>
                 </div>
                 <div className="compare-item">
@@ -398,19 +398,19 @@ const Home = () => {
                 <div className="compare-item">
                   <span className="compare-item__icon compare-item__icon--check">✓</span>
                   <span className="compare-item__text">
-                    데이터로 측정하여 운행한 만큼만 비용 발생
+                    데이터로 측정하여 운행한 만큼만 광고비 부과
                   </span>
                 </div>
                 <div className="compare-item">
                   <span className="compare-item__icon compare-item__icon--check">✓</span>
                   <span className="compare-item__text">
-                    실시간 광고효과 대시보드 제공
+                    광고주에게 실시간 광고효과 대시보드 제공
                   </span>
                 </div>
                 <div className="compare-item">
                   <span className="compare-item__icon compare-item__icon--check">✓</span>
                   <span className="compare-item__text">
-                    모든 차의 운행 데이터 수집 → 모든 차량이 광고 가능
+                    사물인터넷으로 모든 차량의 광고운행 데이터를 수집
                   </span>
                 </div>
                 <div className="compare-item">

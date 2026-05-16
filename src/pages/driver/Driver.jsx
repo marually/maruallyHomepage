@@ -105,7 +105,7 @@ const Driver = () => {
         <div className="driver-data__inner">
           <h2 className="driver-data__title">IoT으로 광고판의 이동데이터를 수집,<br className="mobile-break" /> 모든 차량이 광고 할 수 있습니다.</h2>
           <p className="driver-data__desc">
-            마루알리는 데이터로 광고운행을 측정하므로 어떤 차종이든 최적의 광고주와 매칭되어 기사님의 수익을 창출합니다.<br /> 현재는 옥외광고물법상 허용되는 영업용차, 렌터카가 차량광고 할 수 있습니다.
+            마루알리는 사물인터넷과 운전자 폰의 데이터로 광고운행을 측정하므로, 어떤 차종이든 합리적 비용으로 차별화된 광고효과를 창출합니다.<br /> 현재는 옥외광고물법상 허용되는 영업용차, 렌터카가 차량광고 할 수 있습니다.
           </p>
           <div
             className={`driver-data__image-wrapper fade-in ${imageDataVisible ? 'is-visible' : ''}`}
@@ -174,7 +174,7 @@ const Driver = () => {
             <img src={magnetIcon} alt="Magnet" className="magnet-icon" />
           </div>
           <div className="driver-billboard__extra-text">
-            <h3>승용/승합차용 자석 광고판 배송 : <span className="text-primary">부착이 쉬워 부착비는 없습니다.</span></h3>
+            <h3>승용/승합차는 자석 광고판 배송 : <span className="text-primary">부착이 쉬워 부착비는 없습니다.</span></h3>
             <p>차량 도장면 손상 걱정 없이 누구나 1분 만에 탈부착이 가능한 마그네틱 광고판을 기본으로 제공합니다.<br /> 탈착 감지 기능이 있어, 행사 참석 등으로 필요시 탈착하셔도 됩니다.</p>
           </div>
         </div>

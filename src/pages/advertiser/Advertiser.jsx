@@ -145,7 +145,7 @@ const Advertiser = () => {
               아직도 운휴차에도 광고비를 지급하십니까?
             </h4>
             <p className="vs-explanation__text">
-              법인 택시의 <span className="text-primary font-bold">70%</span>, 버스의 20%는 기사 구인난으로 차고지에 쉬고 있습니다. <br />
+              <span className="text-primary font-bold">법인 택시의 70%, 버스의 20%는</span> 기사 구인난으로 광고를 부착하고도 차고지에 쉬고 있습니다. <br />
               데이터가 없어, 운행과 상관없이 광고판만 부착 하면 광고비를 지급해야 하는 현행 방식에서는<br />
               <span className="text-error font-bold">광고계약한 순간 70%~20% 손실</span>이 발생합니다.
             </p>
@@ -156,10 +156,11 @@ const Advertiser = () => {
       {/* Fee System Section */}
       <section className="advertiser-fee">
         <div className="advertiser-fee__inner">
-          <h2 className="advertiser-fee__title">마루알리 광고비 정산 시스템</h2>
+          <h2 className="advertiser-fee__title">마루알리 광고비 산정</h2>
           <p className="advertiser-fee__desc">
             유동인구가 많은 지역에 오래 광고운행 할수록 광고비가 높아지는 합리적 구조입니다. <br />
-            광고판 면적과 유동인구에 따른 지역별 단가, 해당 지역 광고시간을 곱하여 광고비가 산정됩니다.
+            광고판 면적과 유동인구에 따른 지역별 단가, 해당 지역 광고시간을 곱하여 광고비가 산정됩니다.<br />
+
           </p>
           <div className="fee-formula">
             <p className="fee-formula__text">
@@ -235,7 +236,7 @@ const Advertiser = () => {
             <LottieAnimation animationPath={bowMaruallyJson} className="request-lottie" />
             <h2 className="advertiser-request__title">광고문의 감사합니다.</h2>
             <p className="advertiser-request__desc">
-              데이터로 광고비 산정하는 차량광고로 광고예산 절감 하세요.
+              데이터로 광고비 산정하는 마루알리로 광고예산 절감 하세요.
             </p>
           </div>
           <div className="advertiser-request__form">
