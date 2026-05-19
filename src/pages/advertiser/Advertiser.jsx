@@ -199,8 +199,8 @@ const Advertiser = () => {
                 <h3>해당 지역 광고 시간</h3>
               </div>
               <div className="fee-card__body">
-                <p>승합차가 강동구에서 3시간 운행시 광고비:</p>
-                <p className="fee-highlight">승합차 2㎡ x 강동구 423원 x 3시간 = 2,538원</p>
+                <p>택배차가 서울중구에서 9시간 운행시 광고비:</p>
+                <p className="fee-highlight">택배차 6㎡ x 중구 1,035원 x 9시간 = 55,845원</p>
               </div>
             </div>
           </div>
